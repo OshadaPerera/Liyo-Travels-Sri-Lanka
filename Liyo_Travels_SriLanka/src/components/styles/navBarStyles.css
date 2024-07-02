@@ -1,35 +1,44 @@
-/* Reset some basic styles for better cross-browser consistency */
+/* navBarStyles.css */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.navBar {
+  background-color: #f8f9fa; /* Navbar background color */
+  padding: 1rem 0; /* Padding around navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Navbar shadow */
+}
+
+.navLogo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #343a40;
+}
+
+.nav-link {
+  color: black; /* Text color */
+  padding: 0.5rem 1rem; /* Padding around links */
+  transition: color 0.3s ease; /* Smooth color transition */
+  margin-left: 10px; /* Adjust spacing between links */
+}
+
+.langDropDown {
+  color: #343a40; /* Text color */
+  transition: color 0.3s ease; /* Smooth color transition */
+  margin-left: 1.2rem;
+}
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    text-align: center; /* Center align for collapsed navbar */
   }
-  
-  .navbar {
-    background-color: #343a40; /* Dark background color */
-    padding: 1rem 2rem; /* Padding for the navbar */
-    display: flex;
-    justify-content: center; /* Center the navbar items */
-    align-items: center;
+
+  .navbar-nav {
+    margin-top: 1rem; /* Optional: Adjust top margin for spacing */
   }
-  
-  .nav-list {
-    list-style: none; /* Remove default list style */
-    display: flex; /* Display items in a row */
-  }
-  
+
   .nav-item {
-    margin: 0 1rem; /* Spacing between items */
+    display: inline-block; /* Ensure items appear in-line */
+    margin-right: 10px; /* Adjust spacing between items */
   }
-  
-  .nav-link {
-    color: #ffffff; /* White text color */
-    text-decoration: none; /* Remove underline from links */
-    font-size: 1.2rem; /* Larger font size for links */
-    transition: color 0.3s ease; /* Smooth transition for color change */
-  }
-  
-  .nav-link:hover {
-    color: #007bff; /* Blue color on hover */
-  }
-  
+}
