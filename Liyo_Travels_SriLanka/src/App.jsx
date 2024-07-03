@@ -14,6 +14,11 @@ import NoPage from "./pages/NoPage"; // NoPage component for handling undefined 
 //Import the loader component
 import Loader from "./components/Loader"; // Loader component
 
+// Importing the Footer component
+import Footer from "./components/Footer"; // Footer component
+
+
+
 // Main App component
 function App() {
   //Loader state
@@ -48,6 +53,7 @@ function App() {
         <Route path="*" element={<NoPage />} />{" "}
         {/* Route for handling undefined paths */}
       </Routes>
+      <Footer /> {/* Footer component */}
     </BrowserRouter>
   );
 }

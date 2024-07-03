@@ -17,20 +17,43 @@
 /* Shape divider styles */
 .custom-shape-divider {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
   line-height: 0;
 }
 
-.custom-shape-divider svg {
+.custom-shape-divider-top-1720018553 svg {
   position: relative;
   display: block;
-  width: calc(100% + 1.3px);
-  height: 84px; /* Adjust height as needed */
+  width: calc(144% + 1.3px);
+  height: 36px;
 }
 
-.custom-shape-divider .shape-fill {
-  fill: aquamarine; /* Shape fill color */
+.custom-shape-divider-top-1720015931 path.shape-fill {
+  fill: rgb(255, 170, 127); /* Replace with your desired color */
+}
+
+.footerSection{
+  background-color: rgb(38, 38, 38);
+  color: white;
+}
+
+/* footerStyles.css */
+
+.footerDrop {
+  border: 2px solid white; /* Border style */
+  border-radius: 5px; /* Rounded corners */
+  display: inline-block; /* Make the div fit content width */
+  padding: 5px; /* Padding for inside content */
+}
+
+.footer .footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .footerDrop .dropdown {
+  text-align: left; /* Align dropdown items to the left */
 }
