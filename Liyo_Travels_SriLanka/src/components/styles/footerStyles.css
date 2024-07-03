@@ -1,5 +1,36 @@
+/* Reset styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Footer container styles */
+.footer-container {
+  position: relative; /* Ensure relative positioning */
+  width: 100%; /* Full width */
+  background-color:aquamarine; /* Background color */
+  color: #fff; /* Text color */
+  padding: 2rem 0; /* Padding top and bottom */
+}
+
+/* Shape divider styles */
+.custom-shape-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 84px; /* Adjust height as needed */
+}
+
+.custom-shape-divider .shape-fill {
+  fill: aquamarine; /* Shape fill color */
+}

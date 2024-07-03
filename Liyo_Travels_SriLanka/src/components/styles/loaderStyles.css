@@ -1,0 +1,46 @@
+/* .loader{
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader svg{
+    width: 100%;
+}
+.loading-text{
+    width: 100%;
+    font-weight: bold;
+    color: white;
+    transform: translate(.4rem);
+    margin-top: 1rem;
+
+} */
+
+/* loaderStyles.css */
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ffffff;
+  }
+  
+  .svg-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .lottie-animation {
+    width: 300px;
+    height: 300px;
+  }
+  
