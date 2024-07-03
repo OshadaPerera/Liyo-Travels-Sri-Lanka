@@ -1,11 +1,11 @@
-// Footer.js
-
 import React from "react";
+import { NavLink } from "react-router-dom"; // Import NavLink for routing
 import "./styles/footerStyles.css"; // Import your custom CSS for additional styling
+import CustomDropdown from "./navDropDown";
 
 function Footer() {
   return (
-    <div className="custom-shape-divider-top-1720015931">
+    <div className="custom-shape-divider-top-1720015931 footerSection">
       <svg
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"
@@ -21,56 +21,38 @@ function Footer() {
         <div className="container">
           <div className="row">
             <div className="col-md-3 col-sm-6 footer-col">
+              <div>Language</div>
+              <div className="footerDrop">
+                <CustomDropdown />
+              </div>
+            </div>
+            <div className="col-md-3 col-sm-6 footer-col">
               <h4>Company</h4>
               <ul className="list-unstyled">
+                {/* Update links to use NavLink instead of anchor tags */}
                 <li>
-                  <a href="/">About Us</a>
+                  <NavLink to="/" className="footer-links">
+                    Home
+                  </NavLink>
                 </li>
                 <li>
-                  <a href="/">Our Services</a>
+                  <NavLink to="/gallery" className="footer-links">
+                    Gallery
+                  </NavLink>
                 </li>
                 <li>
-                  <a href="/">Privacy Policy</a>
-                </li>
-              </ul>
-            </div>
-            <div className="col-md-3 col-sm-6 footer-col">
-              <h4>Get Help</h4>
-              <ul className="list-unstyled">
-                <li>
-                  <a href="/">FAQ</a>
+                  <NavLink to="/about" className="footer-links">
+                    About Us
+                  </NavLink>
                 </li>
                 <li>
-                  <a href="/">Shipping</a>
-                </li>
-                <li>
-                  <a href="/">Returns</a>
-                </li>
-                <li>
-                  <a href="/">Order Status</a>
-                </li>
-                <li>
-                  <a href="/">Payment Options</a>
+                  <NavLink to="/contact" className="footer-links">
+                    Contact Us
+                  </NavLink>
                 </li>
               </ul>
             </div>
-            <div className="col-md-3 col-sm-6 footer-col">
-              <h4>Online Shop</h4>
-              <ul className="list-unstyled">
-                <li>
-                  <a href="/">Watch</a>
-                </li>
-                <li>
-                  <a href="/">Bag</a>
-                </li>
-                <li>
-                  <a href="/">Shoes</a>
-                </li>
-                <li>
-                  <a href="/">Dress</a>
-                </li>
-              </ul>
-            </div>
+
             <div className="col-md-3 col-sm-6 footer-col">
               <h4>Follow Us</h4>
               <div className="social-links">
