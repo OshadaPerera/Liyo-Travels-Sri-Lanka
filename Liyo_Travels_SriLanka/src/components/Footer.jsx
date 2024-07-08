@@ -2,78 +2,107 @@ import React from "react";
 import { NavLink } from "react-router-dom"; // Import NavLink for routing
 import "./styles/footerStyles.css"; // Import your custom CSS for additional styling
 import CustomDropdown from "./navDropDown";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faInstagram,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons"; // Import specific icons
+import { faLocationDot, faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 function Footer() {
   return (
-    <div className="custom-shape-divider-top-1720015931 footerSection">
-      <svg
-        data-name="Layer 1"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1200 120"
-        preserveAspectRatio="none"
-      >
-        <path
-          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-          className="shape-fill"
-        ></path>
-      </svg>
-      <footer className="footer">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-3 col-sm-6 footer-col">
-              <div>Language</div>
-              <div className="footerDrop">
-                <CustomDropdown />
-              </div>
+    <footer>
+      <div className="row">
+        <div className="col">
+          <h3>Liyo Travels</h3>
+          <p>
+            We are a travel agency that provides the best travel experience to
+            our customers. We provide the best tour packages and travel
+            services.
+          </p>
+        </div>
+        <div className="col">
+          <h3>
+            Office{" "}
+            <div className="underline">
+              <span></span>
             </div>
-            <div className="col-md-3 col-sm-6 footer-col">
-              <h4>Company</h4>
-              <ul className="list-unstyled">
-                {/* Update links to use NavLink instead of anchor tags */}
-                <li>
-                  <NavLink to="/" className="footer-links">
-                    Home
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/gallery" className="footer-links">
-                    Gallery
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/about" className="footer-links">
-                    About Us
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/contact" className="footer-links">
-                    Contact Us
-                  </NavLink>
-                </li>
-              </ul>
+          </h3>
+          <p>
+            {" "}
+            <FontAwesomeIcon icon={faLocationDot} /> No.425/B
+          </p>
+          <p>Paluwelgala Road</p>
+          <p>Koswatta, Sri Lanka</p>
+          <p>10107</p>
+          <p className="footerEmail">
+            <FontAwesomeIcon icon={faEnvelope} />{" "}
+            <span>
+              {" "}
+              <a href="mailto:liampaynce@gmail.com">
+                LiyoTravelsSriLanka@gmail.com
+              </a>
+            </span>
+          </p>
+          <p><FontAwesomeIcon icon={faPhone} /> {" "}+94 767251336</p>
+        </div>
+        <div className="col footerlinks">
+          <h3>
+            Quick Links{" "}
+            <div className="underline">
+              <span></span>
             </div>
-
-            <div className="col-md-3 col-sm-6 footer-col">
-              <h4>Follow Us</h4>
-              <div className="social-links">
-                <a href="/">
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-                <a href="/">
-                  <i className="fab fa-twitter"></i>
-                </a>
-                <a href="/">
-                  <i className="fab fa-instagram"></i>
-                </a>
-                <a href="/">
-                  <i className="fab fa-linkedin"></i>
-                </a>
-              </div>
+          </h3>
+          <ul>
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/gallery">Gallery</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about">About Us</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact">Contact Us</NavLink>
+            </li>
+          </ul>
+        </div>
+        <div className="col">
+          <h3>
+            Social Links{" "}
+            <div className="underline">
+              <span></span>
             </div>
+          </h3>
+          <div className="footerSocial">
+            <ul>
+              <li>
+                <a href="#">
+                  <FontAwesomeIcon icon={faFacebook} />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <FontAwesomeIcon icon={faInstagram} />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <FontAwesomeIcon icon={faWhatsapp} />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-      </footer>
-    </div>
+      </div>
+      <hr />
+      <p className="copyright">
+        Liyo Travels Sri Lanka &copy; {new Date().getFullYear()} - All Rights
+        Reserved. Solution By | <span className="designer"><a href="https://www.linkedin.com/in/oshada-perera-3536a1248/" target="new">Oshada Perera</a></span>
+      </p>
+    </footer>
   );
 }
 

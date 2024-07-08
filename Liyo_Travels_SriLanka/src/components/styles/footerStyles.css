@@ -6,54 +6,197 @@
 }
 
 /* Footer container styles */
-.footer-container {
-  position: relative; /* Ensure relative positioning */
-  width: 100%; /* Full width */
-  background-color:aquamarine; /* Background color */
-  color: #fff; /* Text color */
-  padding: 2rem 0; /* Padding top and bottom */
+Footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to right, #00093c, #2d0b00);
+  color: #ffffff;
+  padding: 40px 0 2px;
+  border-top-left-radius: 125px;
+  font-size: 13px;
+  line-height: 20px;
 }
 
-/* Shape divider styles */
-.custom-shape-divider {
+.row {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.col {
+  flex-basis: 25%;
+  padding: 10px;
+}
+
+.col h3 {
+  width: fit-content;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: -o-fit-content;
+  width: -ms-fit-content;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.col p {
+  margin: 5px;
+}
+
+.footerEmail {
+  width: fit-content;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: -o-fit-content;
+  width: -ms-fit-content;
+
+  margin: 20px 0 !important;
+}
+
+.footerEmail span {
+  border-bottom: 1px solid #ccc;
+}
+
+.footerEmail a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.footerlinks ul {
+  margin: 0;
+  padding: 0;
+}
+
+.footerlinks ul li {
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+.footerlinks ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footerlinks ul li a:hover,
+.footerEmail a:hover,
+.designer a:hover {
+  color: #ffee10;
+  text-shadow: 0 0 5px #ffee10;
+}
+
+.footerlinks ul li a:focus {
+  color: #ffee10;
+  text-shadow: 0 0 5px #ffee10;
+}
+
+.designer a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footerSocial {
+  display: flex;
+}
+
+.footerSocial ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.footerSocial ul li {
+  list-style: none;
+  margin: 0 5px;
+}
+
+.footerSocial ul li a {
+  position: relative;
+  display: block;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 46px;
+  border-radius: 50%;
+  font-size: 25px;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+.footerSocial ul li a::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #ffee10;
+  transition: 0.5s;
+  transform: scale(1);
+  z-index: -1;
+}
+
+.footerSocial ul li a:hover::before {
+  transform: scale(1);
+  box-shadow: 0 0 10px #ffee10;
+}
+
+.footerSocial ul li a:hover {
+  color: #ffee10;
+  box-shadow: 0 0 5px #ffee10;
+  text-shadow: 0 0 5px #ffee10;
+}
+
+hr {
+  width: 90%;
+  margin: 20px auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.underline {
+  width: 100%;
+  height: 3px;
+  background: #767676;
+  border-radius: 3px;
+  position: absolute;
+  top: 35px;
+  left: 0;
   overflow: hidden;
-  line-height: 0;
 }
 
-.custom-shape-divider-top-1720018553 svg {
-  position: relative;
-  display: block;
-  width: calc(144% + 1.3px);
-  height: 36px;
+.underline span {
+  width: 18px;
+  height: 100%;
+  background: #ffee10;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  animation: footerAnimation 3s infinite;
 }
 
-.custom-shape-divider-top-1720015931 path.shape-fill {
-  fill: rgb(255, 170, 127); /* Replace with your desired color */
+@keyframes footerAnimation {
+  0% {
+    left: -20px;
+  }
+  100% {
+    left: 100%;
+  }
 }
 
-.footerSection{
-  background-color: rgb(38, 38, 38);
-  color: white;
-}
-
-/* footerStyles.css */
-
-.footerDrop {
-  border: 2px solid white; /* Border style */
-  border-radius: 5px; /* Rounded corners */
-  display: inline-block; /* Make the div fit content width */
-  padding: 5px; /* Padding for inside content */
-}
-
-.footer .footer-col {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer .footerDrop .dropdown {
-  text-align: left; /* Align dropdown items to the left */
+@media screen and (max-width: 992px) {
+  Footer {
+    bottom: unset;
+  }
+  .col {
+    flex-basis: 100%;
+  }
 }
