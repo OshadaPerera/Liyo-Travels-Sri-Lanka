@@ -15,7 +15,7 @@ function Footer() {
     <footer>
       <div className="row">
         <div className="col">
-          <h3>Liyo Travels</h3>
+          <h3>Liyo Travels Sri Lanka</h3>
           <p>
             We are a travel agency that provides the best travel experience to
             our customers. We provide the best tour packages and travel
