@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './styles/noPageStyles.css'; // Custom styles
+import './noPageStyles.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap styles
 
 

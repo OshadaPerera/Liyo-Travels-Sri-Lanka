@@ -11,10 +11,17 @@
   padding: 1rem 0; /* Padding around navbar */
   box-shadow: 0 2px 4px var(--shadow-color); /* Navbar shadow */
   text-align: center; /* Center align content */
-  position: relative; /* Ensure relative positioning for absolute children */
+  position: absolute; /* Ensure relative positioning for absolute children */
   color: var(--text-color); /* Text color */
   background-color: var(--bg-color); /* Background color */
   transition: background-color 0.3s ease, color 0.3s ease; /* Transition for color change */
+  margin-top: 5px;
+  top: 0;
+}
+
+.navigation{
+  position: relative !important;
+  margin-top: 0;
 }
 
 .navLogo {

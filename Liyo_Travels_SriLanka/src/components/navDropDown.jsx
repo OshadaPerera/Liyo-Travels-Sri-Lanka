@@ -1,14 +1,19 @@
-import React, { useState, useRef, useEffect } from "react";
-import UKflag from "../assets/images/ukflag.png"; // Importing the UK flag image
-import Israel from "../assets/images/israel.png"; // Import the Israel flag image
-import "./styles/navDropDownStyles.css"; // Importing the CSS file for custom dropdown
+// src/components/CustomDropdown.js
+
+import React, { useState, useRef, useEffect, useContext } from 'react';
+import { LanguageContext } from './languageContext'; // Importing the LanguageContext
+import UKflag from '../assets/images/ukflag.png';
+import Israel from '../assets/images/israel.png';
+import './styles/navDropDownStyles.css';
 
 function CustomDropdown({ isInFooter }) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState({
-    language: "English",
+    language: 'English',
     flag: UKflag,
   });
+
+  const { toggleLanguage } = useContext(LanguageContext);
 
   const dropdownRef = useRef(null);
 
@@ -16,8 +21,9 @@ function CustomDropdown({ isInFooter }) {
     setIsOpen(!isOpen);
   };
 
-  const handleSelect = (language, flag) => {
+  const handleSelect = (language, flag, langCode) => {
     setSelectedLanguage({ language, flag });
+    toggleLanguage(langCode);
     setIsOpen(false);
   };
 
@@ -28,19 +34,19 @@ function CustomDropdown({ isInFooter }) {
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
 
   return (
     <div
-      className={`custom-dropdown ${isInFooter ? "footer-dropdown" : ""}`}
+      className={`custom-dropdown ${isInFooter ? 'footer-dropdown' : ''}`}
       ref={dropdownRef}
     >
       <div className="dropdown-toggle" onClick={handleToggleDropdown}>
-        {selectedLanguage.language}{" "}
+        {selectedLanguage.language}{' '}
         <img
           src={selectedLanguage.flag}
           alt={`${selectedLanguage.language} flag`}
@@ -48,23 +54,23 @@ function CustomDropdown({ isInFooter }) {
         />
       </div>
       <div
-        className={`dropdown-menu ${isOpen ? "active" : ""} ${
-          isInFooter ? "footer-dropdown-menu" : ""
+        className={`dropdown-menu ${isOpen ? 'active' : ''} ${
+          isInFooter ? 'footer-dropdown-menu' : ''
         }`}
       >
         <div
           className={`dropdown-item ${
-            selectedLanguage.language === "English" ? "active" : ""
+            selectedLanguage.language === 'English' ? 'active' : ''
           }`}
-          onClick={() => handleSelect("English", UKflag)}
+          onClick={() => handleSelect('English', UKflag, 'en')}
         >
           <img src={UKflag} alt="UK flag" className="flag" /> English
         </div>
         <div
           className={`dropdown-item ${
-            selectedLanguage.language === "עִברִית" ? "active" : ""
+            selectedLanguage.language === 'עִברִית' ? 'active' : ''
           }`}
-          onClick={() => handleSelect("עִברִית", Israel)}
+          onClick={() => handleSelect('עִברִית', Israel, 'he')}
         >
           <img src={Israel} alt="Israel flag" className="flag" /> עִברִית
         </div>

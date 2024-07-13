@@ -1,0 +1,41 @@
+.destinationCards {
+  grid-template-columns: 1fr; /* Display only one card per row */
+  padding: 1rem; /* Adjust padding for smaller screens */
+}
+
+.destinationCard {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.destinationCard img {
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  
+    .destinationCard img{
+      height: 250px; /* Adjust image height for smaller screens */
+    }
+  
+    .destinationCard p {
+      font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+  
+
+    .homeDestinations{
+      padding: 1.7rem;
+    }
+  
+    .destinationCards{
+      padding: 1rem; /* Adjust padding for smaller screens */
+      width: 100%;
+    }
+  
+    .destinationCard {
+      width: 100%;
+      margin: 1rem 0;
+    }
+  
+  }
+  
