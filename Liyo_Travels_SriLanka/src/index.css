@@ -8,13 +8,13 @@
 }
 
 .swiper-slide {
-  width: 35rem;
-  height: 35rem;
+  width: 28rem !important;
+  height: 31rem !important;
   position: relative;
 }
 .swiper-slide img {
-  width: 35rem !important;
-  height: 35rem !important;
+  width: 28rem !important;
+  height: 31rem !important;
   border-radius: 2rem;
   object-fit: cover;
 }

@@ -25,14 +25,20 @@
   top: 0;
 }
 
-.navigation{
+.navigation {
   position: relative !important;
   margin-top: 0;
 }
 
-.navLogo {
-  font-size: 1.5rem;
-  font-weight: 700;
+.navLogo img {
+  width:80px;
+  height: 70px;
+  margin-left: 1rem;
+}
+
+.navLogo img:hover {
+  cursor: pointer;
+  
 }
 
 .nav-link {
@@ -118,8 +124,6 @@
   border: 3px solid #ffee10;
   box-shadow: 0 0 10px #ffee10;
 }
-
-
 
 @media screen and (max-width: 992px) {
   .navbar-collapse {

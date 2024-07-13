@@ -5,6 +5,7 @@ import "./navBarStyles.css"; // Importing the CSS file
 import CustomDropdown from "../navDropDown"; // Importing the CustomDropdown component
 import { navbarContent } from "./NavbarContent";
 import { LanguageContext } from "../languageContext"; // Importing the LanguageContext
+import Logo from "../../assets/images/logo.png"; // Importing the logo image
 
 function NavBar({ theme }) {
   const { language } = useContext(LanguageContext);
@@ -28,7 +29,7 @@ function NavBar({ theme }) {
           to="/"
           className={`navLogo ${textColorClass}`}
         >
-          Liyo Travels Sri Lanka
+          <img src={Logo} alt="Liyo Travels Logo" />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="navbarNav"

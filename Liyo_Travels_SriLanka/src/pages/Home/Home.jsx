@@ -19,6 +19,11 @@ const Home = () => {
   const homeChooseRef = useIntersectionObserver({ threshold: 0.1 });
   const homeBookRef = useIntersectionObserver({ threshold: 0.1 });
 
+  // Refs for each card in the chooseCards section
+  const chooseCardRefs = currentContent.homeChoose.chooseCards.map(() =>
+    useIntersectionObserver({ threshold: 0.1 })
+  );
+
   return (
     <div className="homePage">
       {/* Cover section with NavBar and introductory content */}
@@ -28,15 +33,25 @@ const Home = () => {
         <div className="homeIntro">
           <h1 className="introHeading">Liyo Travels Sri Lanka</h1>
           <div className="introSlogan">Experience the Extraordinary</div>
+          <div></div>
         </div>
       </div>
-
       {/* Main content section */}
       <div className="homeContentSection">
         {/* Home Welcome section with animation */}
         <div className="homeWelcome" ref={homeWelcomeRef}>
           <h2>{currentContent.homeWelcome.title}</h2>
+
           <p>{currentContent.homeWelcome.description}</p>
+          <div className="welcomeAnimation">
+            <dotlottie-player
+              src="https://lottie.host/30f0524c-05f6-45cd-a569-ece39977edb7/HRitPqQ1I8.json"
+              background="transparent"
+              speed="1"
+              loop
+              autoplay
+            ></dotlottie-player>
+          </div>
         </div>
 
         {/* Destinations component */}
@@ -47,7 +62,11 @@ const Home = () => {
           <h2>{currentContent.homeChoose.title}</h2>
           <div className="chooseCards">
             {currentContent.homeChoose.chooseCards.map((card, index) => (
-              <div className="chooseCard" key={index}>
+              <div
+                className={`chooseCard animation${index}`}
+                ref={chooseCardRefs[index]}
+                key={index}
+              >
                 <div className="cardImg">{card.imgSrc}</div>
                 <h3>{card.title}</h3>
                 <p>{card.description}</p>
@@ -60,8 +79,13 @@ const Home = () => {
         <div className="homeBook" ref={homeBookRef}>
           <div className="bookNow">
             <h2>{currentContent.homeBook.title}</h2>
+            
             <p>{currentContent.homeBook.content}</p>
+
             <button className="bookButton">Book Now</button>
+            <div className="bookAnimation">
+            <dotlottie-player src="https://lottie.host/811c1632-33c1-44a2-b106-dcb9e08f48c8/YlPbrW5waM.json" background="transparent" speed="1" loop autoplay></dotlottie-player>
+            </div>
           </div>
         </div>
       </div>

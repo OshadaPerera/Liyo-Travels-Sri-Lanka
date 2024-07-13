@@ -7,6 +7,9 @@
   box-sizing: border-box;
 }
 
+.homePage{
+  background-color: rgb(223, 223, 223);
+}
 .coverSection {
   background-image: url("../../assets/images/ninearch.jpg");
   background-size: cover;
@@ -27,11 +30,6 @@
   z-index: 1;
 }
 
-body {
-  /* animation: fadeInAnimation ease 3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards; */
-}
 
 .introAnimation {
   height: 17rem;
@@ -104,13 +102,14 @@ body {
 }
 
 .homeWelcome p {
-  text-align: justify;
+  text-align: center;
   padding: 0 1rem;
 }
 
 .homeWelcome h2 {
   opacity: 0; /* Start hidden */
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  text-align: center;
 }
 
 .homeWelcome.visible h2 {
@@ -125,6 +124,10 @@ body {
 .homeWelcome.visible p {
   animation: fadeLeftAnimation 2s ease forwards;
 }
+
+.welcomeAnimation{
+  height: 17rem;
+}
 /* Styles for the choose cards */
 
 .homeChoose {
@@ -134,6 +137,7 @@ body {
 
 .homeChoose.visible h2 {
   animation: fadeUpAnimation 2s ease forwards;
+  z-index: 100;
 }
 
 .chooseCards {
@@ -143,11 +147,45 @@ body {
   align-items: center;
   gap: 1rem;
   padding: 1rem 1rem 1rem 2.5rem;
+  z-index: 1;
+}
+
+/* Different animations for each card */
+.animation0 {
+  opacity: 0;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animation0.visible {
+  animation: fadeLeftAnimation 1s ease forwards;
+}
+
+.animation1 {
+  opacity: 0;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animation1.visible {
+  animation: fadeDownAnimation 1s ease 1s forwards; /* Delay the animation */
+}
+
+.animation2 {
+  opacity: 0;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animation2.visible {
+  animation: fadeUpAnimation 1s ease 1s forwards; /* Delay the animation */
 }
 
 .chooseCard {
   text-align: center;
   width: 370px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0 1rem;
+  height: 35rem;
 }
 
 .cardImg {
@@ -159,14 +197,35 @@ body {
 /* Styles for the home book now section */
 .homeBook {
   margin-top: 3rem;
+  text-align: center;
 }
 .homeBook p {
   padding: 0 1rem;
 }
 
+.homeBook Button{
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+  background-color: #b5b5b5;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bookAnimation{
+  height: 20rem;
+
+}
+
 @media (max-width: 768px) {
-  body {
+  body{
     width: 100%;
+  }
+  .homeContentSection{
+    padding: 0;
+    margin: 0;
   }
   .homeIntro {
     height: auto;

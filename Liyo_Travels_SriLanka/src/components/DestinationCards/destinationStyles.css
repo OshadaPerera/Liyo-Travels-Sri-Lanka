@@ -16,7 +16,8 @@
 .destinationCards {
   margin: 0 2rem 2rem 2rem;
   opacity: 0; /* Start hidden */
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  width: 95%;
 }
 
 .homeDestinations.visible .destinationCards {
@@ -73,8 +74,8 @@
 .photo .glow-wrap {
   overflow: hidden;
   position: absolute;
-  width: 35rem !important;
-  height: 35rem !important;
+  width: 28rem !important;
+  height: 31rem !important;
   border-radius: 2rem;
   top: 0;
   margin-top: -0.1rem;

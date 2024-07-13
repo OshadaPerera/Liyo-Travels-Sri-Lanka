@@ -16,6 +16,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { LanguageContext } from "../languageContext";
 import { footerContent } from "./FooterContent";
+import Logo from "../../assets/images/logo.png";
 
 function Footer() {
   const { language } = useContext(LanguageContext);
@@ -25,7 +26,11 @@ function Footer() {
     <footer>
       <div className="row">
         <div className="col">
-          <h3>{currentContent.title}</h3>
+          <div className="footerLogo">
+          <NavLink to="/">
+            <img src={Logo} alt="Liyo Travels Logo" />
+            </NavLink>
+          </div>
           <p>{currentContent.description}</p>
         </div>
         <div className="col">
