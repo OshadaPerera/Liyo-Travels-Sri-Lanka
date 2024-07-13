@@ -5,6 +5,8 @@ import "./destinationStyles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
+import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -17,8 +19,12 @@ import { Navigation, Pagination, EffectCoverflow } from "swiper/modules";
 function Destinations() {
   const { language } = useContext(LanguageContext);
   const currentContent = DestinationContent[language];
+
+  const destinationRef = useIntersectionObserver({ threshold: 0.1 });
+
+
   return (
-    <div className="homeDestinations">
+    <div className="homeDestinations" ref={destinationRef}>
       <h2>{currentContent.homeDestinations.title}</h2>
       <Swiper
         className="destinationCards"

@@ -3,12 +3,24 @@
   margin-top: 2rem;
 }
 
-.homeDestinations h2 {
-  margin-bottom: 2rem;
+.homeDestinations.visible h2 {
+  animation: fadeUpAnimation 2s ease forwards;
 }
 
-.destinationCards{
-    margin: 0 2rem 2rem 2rem;
+.homeDestinations h2 {
+  margin-bottom: 2rem;
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.destinationCards {
+  margin: 0 2rem 2rem 2rem;
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out
+}
+
+.homeDestinations.visible .destinationCards {
+  animation: fadeRightAnimation 2s ease forwards;
 }
 
 .description-title {
@@ -18,7 +30,6 @@
 .description-text {
   font-size: 1rem;
 }
-
 
 /* Overlay for additional description on hover */
 .description-overlay {
@@ -139,8 +150,6 @@
 
 /* Styles for mobile devices (max-width: 480px) */
 @media (max-width: 480px) {
-
-
   .destinationCard p {
     font-size: 0.9rem; /* Adjust font size for smaller screens */
   }
@@ -162,5 +171,3 @@
     gap: 1.5rem;
   }
 }
-
-

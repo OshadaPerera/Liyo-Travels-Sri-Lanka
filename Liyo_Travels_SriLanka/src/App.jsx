@@ -14,10 +14,8 @@ import NoPage from "./pages/NoPage/NoPage"; // NoPage component for handling und
 import { LanguageProvider } from "./components/languageContext"; // Importing the LanguageProvider from languageContext
 
 //Import the loader component
-//import Loader from "./components/Loader"; // Loader component
+import Loader from "./components/Loader"; // Loader component
 
-// Importing the Footer component
-import Footer from "./components/Footer/Footer"; // Footer component
 
 // Main App component
 function App() {
@@ -29,17 +27,15 @@ function App() {
     const fakeDataFetch = () => {
       setTimeout(() => {
         setIsLoading(false);
-      }, 4000);
+      }, 3000);
     };
     fakeDataFetch();
   }, []);
 
-  return (
-  // isLoading ?
-   
+  return isLoading ? (
     // Conditional rendering of the loader
-    // <Loader />
-  // ) : (
+    <Loader />
+  ) : (
     <LanguageProvider>
       <BrowserRouter>
         {/* Routes is used to render the route definitions */}

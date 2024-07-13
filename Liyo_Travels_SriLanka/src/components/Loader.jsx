@@ -14,10 +14,9 @@ const Loader = () => {
     <div className="loader">
       <div className="lottie-animation">
         <dotlottie-player
-          src="https://lottie.host/d6c1b7c8-3ec7-41d1-9057-3a70ba0728da/yHkQlHms7t.json"
+          src="https://lottie.host/e73863d9-24d7-4ad2-a358-d659e7929312/193Q7s0kRF.json"
           background="transparent"
           speed="1"
-          style={{ width: "300px", height: "300px" }}
           loop
           autoplay
         ></dotlottie-player>

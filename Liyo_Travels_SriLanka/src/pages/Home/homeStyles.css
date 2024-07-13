@@ -33,16 +33,6 @@ body {
   animation-fill-mode: forwards; */
 }
 
-/* Animation for the home page */
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .introAnimation {
   height: 17rem;
   position: absolute;
@@ -78,28 +68,6 @@ body {
   animation: fadeLeftAnimation 2s ease, zoomInOut 10s ease-in-out infinite;
 }
 
-@keyframes fadeLeftAnimation {
-  0% {
-    opacity: 0;
-    transform: translateX(-500px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* Animation for the introHeading */
-@keyframes zoomInOut {
-  0%,
-  100% {
-    background-size: 40%;
-  }
-  50% {
-    background-size: 10%;
-  }
-}
-
 .introSlogan {
   display: flex;
   flex-direction: row;
@@ -110,17 +78,6 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   margin-bottom: 1rem;
-}
-
-@keyframes fadeRightAnimation {
-  0% {
-    opacity: 0;
-    transform: translateX(500px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 
 .introSlogan:first-of-type {
@@ -141,22 +98,6 @@ body {
   animation: fadeRightAnimation 2s ease, slidein 4s infinite;
 }
 
-/* Animation for the introSlogan */
-@keyframes showup {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 .homeContentSection {
   padding: 2rem;
   margin-bottom: 1rem;
@@ -167,30 +108,32 @@ body {
   padding: 0 1rem;
 }
 
-.homeWelcome {
+.homeWelcome h2 {
   opacity: 0; /* Start hidden */
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-.homeWelcome.visible {
+.homeWelcome.visible h2 {
   animation: fadeUpAnimation 2s ease forwards;
 }
 
-@keyframes fadeUpAnimation {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.homeWelcome p {
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
+.homeWelcome.visible p {
+  animation: fadeLeftAnimation 2s ease forwards;
+}
 /* Styles for the choose cards */
 
 .homeChoose {
   margin-top: 3rem;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.homeChoose.visible h2 {
+  animation: fadeUpAnimation 2s ease forwards;
 }
 
 .chooseCards {

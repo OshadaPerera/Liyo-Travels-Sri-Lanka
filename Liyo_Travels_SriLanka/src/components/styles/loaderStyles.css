@@ -24,23 +24,22 @@
 
 /* loaderStyles.css */
 .loader {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #ffffff;
-  }
-  
-  .svg-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .lottie-animation {
-    width: 300px;
-    height: 300px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(41, 41, 41);
+}
+
+.svg-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.lottie-animation {
+  width: 300px;
+  height: 300px;
+}
