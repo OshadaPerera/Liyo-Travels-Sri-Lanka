@@ -1,41 +1,166 @@
-.destinationCards {
-  grid-template-columns: 1fr; /* Display only one card per row */
-  padding: 1rem; /* Adjust padding for smaller screens */
+/* Base styles for the homeDestinations component */
+.homeDestinations {
+  margin-top: 2rem;
 }
+
+.homeDestinations h2 {
+  margin-bottom: 2rem;
+}
+
+.destinationCards{
+    margin: 0 2rem 2rem 2rem;
+}
+
+.description-title {
+  margin: 0.5rem 0;
+}
+
+.description-text {
+  font-size: 1rem;
+}
+
+
+/* Overlay for additional description on hover */
+.description-overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 2rem;
+}
+
+.destinationCard:hover .description-overlay {
+  opacity: 1;
+}
+
+/* Decorative glow effect */
+.glow-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1)
+  );
+}
+
+/* Styles for the destination cards */
 
 .destinationCard {
-  width: 100%;
-  margin-top: 1.5rem;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius: 2rem;
 }
 
-.destinationCard img {
-  width: 100%;
+.photo .glow-wrap {
+  overflow: hidden;
+  position: absolute;
+  width: 35rem !important;
+  height: 35rem !important;
+  border-radius: 2rem;
+  top: 0;
+  margin-top: -0.1rem;
 }
 
-@media (max-width: 480px) {
-  
-    .destinationCard img{
-      height: 250px; /* Adjust image height for smaller screens */
-    }
-  
-    .destinationCard p {
-      font-size: 0.9rem; /* Adjust font size for smaller screens */
-    }
-  
+.photo .glow {
+  display: block;
+  position: absolute;
+  width: 30%;
+  height: 350%;
+  background: rgba(255, 230, 0, 0.289);
+  top: 0;
+  filter: blur(5px);
+  transform: rotate(45deg) translate(-450%, 0);
+  animation: glowAnimation 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+  display: none;
+}
 
-    .homeDestinations{
-      padding: 1.7rem;
-    }
-  
-    .destinationCards{
-      padding: 1rem; /* Adjust padding for smaller screens */
-      width: 100%;
-    }
-  
-    .destinationCard {
-      width: 100%;
-      margin: 1rem 0;
-    }
-  
+.destinationCard:hover .glow {
+  display: block;
+}
+
+@keyframes glowAnimation {
+  0% {
+    transform: rotate(45deg) translate(-450%, 0);
   }
-  
+  100% {
+    transform: rotate(90deg) translate(450%, 0);
+  }
+}
+
+.photo:hover .glow {
+  transform: rotate(90deg) translate(450%, 0);
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.photo:hover img,
+.photo:hover .glow-wrap {
+  margin-top: 0;
+}
+
+.destinationCard p {
+  text-align: justify;
+  padding: 0 1rem;
+}
+
+/* Overlay for additional description on hover */
+.description-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(230, 230, 230, 0.782); /* Semi-transparent white */
+  -webkit-backdrop-filter: blur(10px); /* Safari */
+  backdrop-filter: blur(10px); /* Apply backdrop blur */
+  color: #000000;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  transition: opacity 0.3s ease;
+  /* Fallback for browsers that do not support backdrop-filter */
+  background: rgba(
+    230,
+    230,
+    230,
+    0.782
+  ); /* Fallback semi-transparent background */
+}
+
+/* Styles for mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+
+
+  .destinationCard p {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+
+  .homeDestinations {
+    padding: 1.7rem;
+  }
+
+  .destinationCard {
+    width: 95%;
+    margin: 1rem 0;
+    position: relative;
+  }
+}
+/* Styles for tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .destinationCards {
+    grid-template-columns: repeat(2, 1fr); /* Two column layout */
+    gap: 1.5rem;
+  }
+}
+
+

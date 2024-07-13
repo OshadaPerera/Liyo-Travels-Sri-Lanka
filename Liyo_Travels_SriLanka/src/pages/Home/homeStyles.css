@@ -28,10 +28,26 @@
 }
 
 body {
-  animation: fadeInAnimation ease 3s;
-  animation-delay: 4s;
+  /* animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
+}
+
+/* Animation for the home page */
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.introAnimation {
+  height: 17rem;
+  position: absolute;
+  width: 80%;
+  top: 8%;
 }
 
 .homeIntro {
@@ -59,7 +75,18 @@ body {
   -webkit-background-clip: text;
   color: rgba(0, 0, 0, 0.08);
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.56);
-  animation: zoomInOut 10s ease-in-out infinite;
+  animation: fadeLeftAnimation 2s ease, zoomInOut 10s ease-in-out infinite;
+}
+
+@keyframes fadeLeftAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* Animation for the introHeading */
@@ -85,12 +112,23 @@ body {
   margin-bottom: 1rem;
 }
 
+@keyframes fadeRightAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .introSlogan:first-of-type {
   /* For increasing performance 
                        ID/Class should've been used. 
                        For a small demo 
                        it's okaish for now */
-  animation: showup 7s infinite;
+  animation: fadeRightAnimation 2s ease, showup 7s infinite;
 }
 
 .introSlogan:last-of-type {
@@ -100,7 +138,7 @@ body {
 
 .introSlogan:last-of-type span {
   margin-left: -355px;
-  animation: slidein 4s infinite;
+  animation: fadeRightAnimation 2s ease, slidein 4s infinite;
 }
 
 /* Animation for the introSlogan */
@@ -119,130 +157,41 @@ body {
   }
 }
 
-/* Animation for the home page */
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.introAnimation {
-  height: 17rem;
-  position: absolute;
-  width: 80%;
-  top: 8%;
-}
-
-.homeWelcome,
-.homeDestinations,
-.homeChoose {
+.homeContentSection {
   padding: 2rem;
+  margin-bottom: 1rem;
 }
 
 .homeWelcome p {
   text-align: justify;
-}
-/* Styles for the destination cards */
-
-.destinationCards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem 1rem 1rem 2.5rem;
-}
-
-.destinationCard {
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  width: 370px;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-.destinationCard img {
-  width: 370px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 10px 10px 0 0;
-  margin-bottom: 1rem;
-}
-
-.photo .glow-wrap {
-  overflow: hidden;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  margin-top: -10px;
-}
-
-.photo .glow {
-  display: block;
-  position: absolute;
-  width: 40%;
-  height: 200%;
-  background: rgba(255, 230, 0, 0.289);
-  top: 0;
-  filter: blur(5px);
-  transform: rotate(45deg) translate(-450%, 0);
-  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-.photo:hover .glow {
-  transform: rotate(90deg) translate(450%, 0);
-  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-.photo:hover img,
-.photo:hover .glow-wrap {
-  margin-top: 0;
-}
-
-.destinationCard p {
-  text-align: justify;
   padding: 0 1rem;
 }
 
-.destinationCard .description-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.703); /* Semi-transparent white */
-  backdrop-filter: blur(10px); /* Apply backdrop blur */
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  transition: opacity 0.3s ease;
+.homeWelcome {
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-.destinationCard:hover {
-  transform: scale(1.05);
+.homeWelcome.visible {
+  animation: fadeUpAnimation 2s ease forwards;
 }
 
-.destinationCard:hover .description-overlay {
-  opacity: 1;
-  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.1);
-}
-
-.destinationCard:hover .description-text,
-.destinationCard:hover .description-title {
-  display: block; /* Show full description on hover */
-  color: #ffffff;
+@keyframes fadeUpAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Styles for the choose cards */
+
+.homeChoose {
+  margin-top: 3rem;
+}
 
 .chooseCards {
   display: grid;
@@ -262,6 +211,14 @@ body {
   width: 370px;
   height: 300px;
   margin-top: 1rem;
+}
+
+/* Styles for the home book now section */
+.homeBook {
+  margin-top: 3rem;
+}
+.homeBook p {
+  padding: 0 1rem;
 }
 
 @media (max-width: 768px) {
@@ -317,12 +274,9 @@ body {
     font-size: 1rem; /* Further adjust font size for smaller screens */
   }
 
-
   .cardImg {
     height: 250px; /* Adjust image height for smaller screens */
   }
-
-
 
   .homeWelcome,
   .homeChoose {
