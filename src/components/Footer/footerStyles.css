@@ -200,8 +200,12 @@ hr {
   Footer {
     bottom: unset;
   }
+  .row{
+    width: 90%;
+  }
   .col {
     flex-basis: 100%;
+    margin: 0 1rem;
   }
 
   .footerSocial {
@@ -210,31 +214,31 @@ hr {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .footerLogo img {
+    height: 120px;
+  }
+
+  .row{
+    flex-direction: column;
+  }
+  .col{
+    flex-basis: 50%;
+  }
+}
+
 @media screen and (max-width: 518px) {
   .footerLogo img {
     height: 100px;
   }
-  .footerEmail {
-    width: 100%;
-  }
-  .footerEmail span {
-    display: block;
-  }
-  .footerEmail a {
-    display: block;
-  }
-  .footerlinks ul li {
-    margin-bottom: 10px;
-  }
-  .footerSocial ul li a {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 20px;
-  }
 
   Footer .row {
-    width: 100%;
     flex-direction: column;
   }
+
+  .footerSocial {
+    margin: 0;
+    padding: 0;
+  }
+  
 }
