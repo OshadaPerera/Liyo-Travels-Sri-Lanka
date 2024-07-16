@@ -10,6 +10,7 @@ function Gallery() {
       <NavBar />
       <div className="galleryContainer">
         <p>{currentContent.galleryIntro.title}</p>
+        hello
       </div>
       {/* <Footer /> Footer component */}
     </div>
