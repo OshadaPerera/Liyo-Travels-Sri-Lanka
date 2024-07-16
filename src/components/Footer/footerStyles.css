@@ -181,12 +181,11 @@ hr {
   left: 10px;
   animation: footerAnimation 3s infinite;
 }
-.footerLogo img{
-  height:150px;
+.footerLogo img {
+  height: 150px;
   margin-left: auto;
   margin-right: auto;
   display: block;
-
 }
 @keyframes footerAnimation {
   0% {
@@ -201,12 +200,45 @@ hr {
   Footer {
     bottom: unset;
   }
+  .row{
+    width: 90%;
+  }
   .col {
     flex-basis: 100%;
+    margin: 0 1rem;
   }
 
   .footerSocial {
     margin: 0;
     padding: 0;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .footerLogo img {
+    height: 120px;
+  }
+
+  .row{
+    flex-direction: column;
+  }
+  .col{
+    flex-basis: 50%;
+  }
+}
+
+@media screen and (max-width: 518px) {
+  .footerLogo img {
+    height: 100px;
+  }
+
+  Footer .row {
+    flex-direction: column;
+  }
+
+  .footerSocial {
+    margin: 0;
+    padding: 0;
+  }
+  
 }
