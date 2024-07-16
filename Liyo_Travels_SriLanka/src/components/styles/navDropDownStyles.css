@@ -1,0 +1,67 @@
+.custom-dropdown {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+  margin-bottom: 5px;
+}
+
+.flag {
+  width: 20px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 90%; /* Position dropdown below the navbar */
+  right: 0; /* Position dropdown at the right edge */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: auto;
+  z-index: 1000;
+  display: none; /* Initially hide the dropdown menu */
+  opacity: 0;
+  pointer-events: none; /* Disable pointer events when hidden */
+  transition: opacity 0.3s ease; /* Fade-in/out transition */
+}
+
+.dropdown-menu.active {
+  display: block; /* Show the dropdown menu when active */
+  opacity: 1;
+  pointer-events: auto; /* Enable pointer events when visible */
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Left-align items */
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transition for background color */
+}
+
+.dropdown-item.active {
+  background-color: #00ff99; /* Active effect */
+  color: #fff;
+}
+/* Footer specific styles */
+.footer-dropdown-menu {
+  /* Add specific styles for the dropdown in the footer */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: auto;
+}
+
+@media screen and (max-width: 992px) {
+  .custom-dropdown {
+    margin-top: 15px;
+  }
+
+  .dropdown-menu.active {
+    opacity: 1;
+    pointer-events: auto;
+    max-width: 30px;
+    margin: auto;
+  }
+}

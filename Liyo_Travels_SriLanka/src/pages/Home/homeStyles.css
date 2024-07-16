@@ -1,0 +1,401 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.homePage {
+  background-color: rgb(223, 223, 223);
+}
+.coverSection {
+  background-image: url("../../assets/images/ninearch.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Example: Set height to fill the viewport */
+  z-index: -10;
+}
+
+.coverSection::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  z-index: 1;
+}
+
+.introAnimation {
+  height: 17rem;
+  position: absolute;
+  width: 80%;
+  top: 8%;
+}
+
+.homeIntro {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #ffffff;
+  text-align: center;
+  flex-direction: column; /* This will stack the items vertically */
+  z-index: 5;
+}
+
+.introHeading {
+  font-size: 6rem;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  margin-bottom: 1rem;
+  line-height: 8vw;
+  font-weight: 900;
+  background: url(https://images.unsplash.com/photo-1580794749460-76f97b7180d8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: 40%;
+  background-position: 50% 50%;
+  -webkit-background-clip: text;
+  color: rgba(0, 0, 0, 0.08);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.56);
+  animation: fadeLeftAnimation 2s ease, zoomInOut 10s ease-in-out infinite;
+}
+
+.introSlogan {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 1.7rem;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.introSlogan:first-of-type {
+  /* For increasing performance 
+                       ID/Class should've been used. 
+                       For a small demo 
+                       it's okaish for now */
+  animation: fadeRightAnimation 2s ease, showup 7s infinite;
+}
+
+.introSlogan:last-of-type {
+  width: 0px;
+  animation: reveal 7s infinite;
+}
+
+.introSlogan:last-of-type span {
+  margin-left: -355px;
+  animation: fadeRightAnimation 2s ease, slidein 4s infinite;
+}
+
+.homeContentSection {
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.homeWelcome p {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.homeWelcome h2 {
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  text-align: center;
+}
+
+.homeWelcome.visible h2 {
+  animation: fadeUpAnimation 2s ease forwards;
+}
+
+.homeWelcome p {
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.homeWelcome.visible p {
+  animation: fadeLeftAnimation 2s ease forwards;
+}
+
+.welcomeAnimation {
+  height: 17rem;
+}
+
+.welcomeLanguage {
+  margin-left: 1rem;
+}
+.welcomeLanguage li {
+  line-height: 1.7;
+}
+ul {
+  list-style: none; /* Remove HTML bullets */
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding-left: 16px;
+}
+
+li::before {
+  content: "•"; /* Insert content that looks like bullets */
+  padding-right: 8px;
+  color: rgb(0, 17, 255); /* Or a color you prefer */
+  font-size: 1.2rem;
+}
+/* Styles for the choose cards */
+
+.homeChoose {
+  margin-top: 3rem;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.homeChoose.visible h2 {
+  animation: fadeUpAnimation 2s ease forwards;
+  z-index: 100;
+}
+
+.chooseCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1rem 1rem 2.5rem;
+  z-index: 1;
+}
+
+/* Different animations for each card */
+.animation0 {
+  opacity: 0;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animation0.visible {
+  animation: fadeLeftAnimation 1s ease forwards;
+}
+
+.animation1 {
+  opacity: 0;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animation1.visible {
+  animation: fadeDownAnimation 1s ease 1s forwards; /* Delay the animation */
+}
+
+.animation2 {
+  opacity: 0;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animation2.visible {
+  animation: fadeUpAnimation 1s ease 1s forwards; /* Delay the animation */
+}
+
+.chooseCard {
+  text-align: center;
+  width: 370px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0 1rem;
+  height: 35rem;
+}
+
+.cardImg {
+  width: 370px;
+  height: 300px;
+  margin-top: 1rem;
+}
+
+/* Styles for the home book now section */
+.homeBook {
+  margin-top: 3rem;
+  text-align: center;
+}
+.homeBook p {
+  padding: 0 1rem;
+}
+
+.bookAnimation {
+  height: 20rem;
+}
+
+/* Book button */
+.homeBook button {
+  position: relative;
+  background: #b3b3b3;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  transition: 0.2s;
+  border-radius: 10px;
+}
+
+.homeBook button:hover {
+  letter-spacing: 0.2rem;
+  padding: 1.1rem 2.1rem;
+  background: #fff200;
+  color: #fff200;
+  /* box-shadow: 0 0 35px var(--clr); */
+  animation: box 3s infinite;
+}
+
+.homeBook button::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #949494;
+  border-radius: 10px;
+}
+
+.homeBook button span {
+  position: relative;
+  z-index: 1;
+}
+.homeBook button i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.homeBook button i::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 3px;
+  left: 80%;
+  top: -2px;
+  border: 3px solid #fff200;
+  border-radius:2px ;
+  background: #272822;
+  transition: 0.2s;
+}
+
+.homeBook button:hover i::before {
+  width: 15px;
+  left: 20%;
+  animation: move 3s infinite;
+}
+
+.homeBook button i::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 3px;
+  border-radius:2px ;
+  left: 20%;
+  bottom: -2px;
+  border: 3px solid #fff200;
+  background: #272822;
+  transition: 0.2s;
+}
+
+.homeBook button:hover i::after {
+  width: 15px;
+  left: 80%;
+  animation: move 3s infinite;
+}
+
+/* Media queries for responsive design */
+
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+  .homeContentSection {
+    padding: 0;
+    margin: 0;
+  }
+  .homeIntro {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .introHeading {
+    font-size: 4rem; /* Adjust font size for smaller screens */
+    line-height: 1.2; /* Adjust line height as needed */
+  }
+
+  .introSlogan {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .introAnimation {
+    display: none; /* Hide animation on smaller screens if necessary */
+  }
+
+  .homeWelcome {
+    width: 98%;
+  }
+
+  .chooseCard {
+    width: 100%;
+  }
+
+  .cardImg {
+    width: 100%;
+  }
+
+  .chooseCards {
+    grid-template-columns: 1fr; /* Display only one card per row */
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    width: 100%;
+  }
+  .introHeading {
+    font-size: 2.5rem; /* Further adjust font size for smaller screens */
+    line-height: 1.4; /* Adjust line height as needed */
+  }
+
+  .introSlogan {
+    font-size: 1rem; /* Further adjust font size for smaller screens */
+  }
+
+  .cardImg {
+    height: 250px; /* Adjust image height for smaller screens */
+  }
+
+  .homeWelcome,
+  .homeChoose {
+    padding: 1.7rem;
+  }
+
+  .chooseCards {
+    padding: 1rem; /* Adjust padding for smaller screens */
+    width: 100%;
+  }
+
+  .chooseCard {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .cardImg {
+    width: 100%;
+  }
+
+  .homeWelcome {
+    width: 98%;
+  }
+
+  .homeWelcome p {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+}
