@@ -40,12 +40,14 @@ const animations = {
 // Content object
 export const content = {
   en: {
+    slogan: { title: "Experience the Extraordinary" },
+
     homeWelcome: {
       title: "Welcome to Liyo Travels",
-      description: `At Liyo Travels Sri Lanka, we are dedicated to providing the best
-                      travel experience in Sri Lanka. We offer exceptional tour packages and
-                      travel services. From landing to departure, we plan every detail for a
-                      seamless and unforgettable journey through Sri Lanka.`,
+      description: `At Liyo Travels Sri Lanka, we are dedicated to providing the best travel experience in Sri Lanka. We offer exceptional tour packages and travel services. From landing to departure, we plan every detail for a seamless and unforgettable journey through Sri Lanka.`,
+      languageTitle: "Languages Spoken by Our Expert Guides:",
+      languageList: ["English", "Hebrew"],
+      // languageDescription: "Select your preferred language",
     },
     homeChoose: {
       title: "Why choose Us?",
@@ -79,12 +81,21 @@ export const content = {
       title: "Book Your Sri Lankan Adventure Today",
       content:
         "Ready to explore the wonders of Sri Lanka? Contact us now to start planning your dream vacation.",
+      book: "Contact Us",
     },
   },
   he: {
+    slogan: { title: "חוו את המופלא" },
     homeWelcome: {
       title: "ברוכים הבאים לליו טורס",
-      description: `בליו טורס סרי לנקה, אנחנו מחויבים לספק את חוויית הנסיעה הטובה ביותר בסרי לנקה. אנו מציעים חבילות טיול ושירותי נסיעות יוצאי דופן. מהנחיתה ועד העזיבה, אנו מתכננים כל פרט ופרט לחוויה חלקה ובלתי נשכחת ברחבי סרי לנקה.`,
+      description: `At Liyo Travels Sri Lanka, we are dedicated to providing the best travel experience in Sri Lanka. We offer exceptional tour packages and travel services. From landing to departure, we plan every detail for a seamless and unforgettable journey through Sri Lanka.
+
+---
+
+ב"Liyo Travels Sri Lanka" אנו מחויבים לספק את חוויית הנסיעה הטובה ביותר בסרי לנקה. אנו מציעים חבילות טיול ושירותי נסיעות יוצאי דופן. מהנחיתה ועד העזיבה, אנו מתכננים כל פרט לחוויה חלקה ובלתי נשכחת ברחבי סרי לנקה.`,
+      languageTitle: "השפות שמדריכינו מסוגלים לדבר:",
+      languageList: ["אנגלית", "עברית"],
+      // languageDescription: "Select your preferred language",
     },
     homeChoose: {
       title: "למה לבחור בנו?",
@@ -110,6 +121,7 @@ export const content = {
       title: "הזמינו את ההרפתקה הסרי לנקית שלכם היום",
       content:
         "מוכנים לגלות את פלאי סרי לנקה? צרו איתנו קשר עכשיו כדי להתחיל לתכנן את חופשת החלומות שלכם.",
+      book: "צרו קשר",
     },
   },
 };
