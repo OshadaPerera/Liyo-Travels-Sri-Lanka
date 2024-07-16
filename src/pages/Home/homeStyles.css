@@ -134,17 +134,17 @@
 .welcomeLanguage li {
   line-height: 1.7;
 }
-ul {
+.welcomeLanguage ul {
   list-style: none; /* Remove HTML bullets */
   padding: 0;
   margin: 0;
 }
 
-li {
+.welcomeLanguage li {
   padding-left: 16px;
 }
 
-li::before {
+.welcomeLanguage li::before {
   content: "•"; /* Insert content that looks like bullets */
   padding-right: 8px;
   color: rgb(0, 17, 255); /* Or a color you prefer */
@@ -279,7 +279,7 @@ li::before {
   left: 80%;
   top: -2px;
   border: 3px solid #fff200;
-  border-radius:2px ;
+  border-radius: 2px;
   background: #272822;
   transition: 0.2s;
 }
@@ -295,7 +295,7 @@ li::before {
   position: absolute;
   width: 10px;
   height: 3px;
-  border-radius:2px ;
+  border-radius: 2px;
   left: 20%;
   bottom: -2px;
   border: 3px solid #fff200;
