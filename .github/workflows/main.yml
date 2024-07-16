@@ -4,17 +4,17 @@ on:
       - main
 name: 🚀 Deploy website on push
 jobs:
-  build-and-deploy:
+  web-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Use Node.js 20
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 20.11.1
 
       - name: 🛠 Install dependencies
         run: npm install
