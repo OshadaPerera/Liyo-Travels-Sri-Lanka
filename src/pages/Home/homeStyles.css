@@ -124,12 +124,21 @@
   animation: fadeLeftAnimation 2s ease forwards;
 }
 
+.homeWelcome .welcomeLanguage {
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.homeWelcome.visible .welcomeLanguage {
+  animation: fadeRightAnimation 2s ease forwards;
+}
+
 .welcomeAnimation {
   height: 17rem;
 }
 
 .welcomeLanguage {
-  margin-left: 1rem;
+  text-align: center;
 }
 .welcomeLanguage li {
   line-height: 1.7;
@@ -221,12 +230,42 @@
   margin-top: 3rem;
   text-align: center;
 }
+
 .homeBook p {
   padding: 0 1rem;
 }
 
 .bookAnimation {
   height: 20rem;
+}
+
+/* Home book transition animations */
+
+.homeBook h2 {
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.homeBook.visible h2 {
+  animation: fadeUpAnimation 2s ease forwards;
+}
+
+.homeBook p {
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.homeBook.visible p {
+  animation: fadeLeftAnimation 2s ease forwards;
+}
+
+.homeBook .bookAnimation {
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.homeBook.visible .bookAnimation {
+  animation: fadeDownAnimation 2s ease forwards;
 }
 
 /* Book button */

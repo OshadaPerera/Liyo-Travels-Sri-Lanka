@@ -1,0 +1,46 @@
+export const contactContent = {
+  en: {
+    title: "Contact Us",
+    description:
+      "We are here to help you plan your perfect trip. Reach out to us through any of the following platforms:",
+    whatsapp: "WhatsApp",
+    facebook: "Facebook",
+    instagram: "Instagram",
+    email: "Email",
+    followUs: "Follow Us",
+    addressTitle: "Our Address",
+    address: "1234 Travel St, Colombo, Sri Lanka",
+    phoneTitle: "Phone Number",
+    phone: "+94 123 456 789",
+    mapTitle: "Our Location",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.9774200282223!2d90.41251831429955!3d23.81033279865914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c748dbfb4d0f%3A0x1d3c3e3bc5d0f5c5!2sGoogle!5e0!3m2!1sen!2sbd!4v1621838472501!5m2!1sen!2sbd",
+    formTitle: "Send Us a Message",
+    nameLabel: "Name",
+    emailLabel: "Email",
+    messageLabel: "Message",
+    submitButton: "Submit",
+  },
+  he: {
+    title: "צור קשר",
+    description:
+      "אנו כאן כדי לעזור לך לתכנן את הטיול המושלם. צור איתנו קשר באמצעות אחת מהפלטפורמות הבאות:",
+    whatsapp: "וואטסאפ",
+    facebook: "פייסבוק",
+    instagram: "אינסטגרם",
+    email: "אימייל",
+    followUs: "עקוב אחרינו",
+    addressTitle: "הכתובת שלנו",
+    address: "רחוב הנסיעה 1234, קולומבו, סרי לנקה",
+    phoneTitle: "מספר טלפון",
+    phone: "+94 123 456 789",
+    mapTitle: "המיקום שלנו",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.9774200282223!2d90.41251831429955!3d23.81033279865914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c748dbfb4d0f%3A0x1d3c3e3bc5d0f5c5!2sGoogle!5e0!3m2!1she!2sil!4v1621838472501!5m2!1she!2sil",
+    formTitle: "שלח לנו הודעה",
+    nameLabel: "שם",
+    emailLabel: "אימייל",
+    messageLabel: "הודעה",
+    submitButton: "שלח",
+  },
+};

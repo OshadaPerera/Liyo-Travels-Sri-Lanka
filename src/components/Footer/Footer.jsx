@@ -55,7 +55,7 @@ function Footer() {
             </span>
           </p>
           <p>
-            <FontAwesomeIcon icon={faPhone} /> {currentContent.office.phone}
+            {/* <FontAwesomeIcon icon={faPhone} /> {currentContent.office.phone} */}
           </p>
         </div>
         <div className="col footerlinks">
