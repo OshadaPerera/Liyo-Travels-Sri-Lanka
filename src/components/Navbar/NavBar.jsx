@@ -48,7 +48,7 @@ function NavBar({ theme }) {
               </Nav.Link>
             ))}
             {/* Custom dropdown for language selection */}
-            <CustomDropdown />
+            {/* <CustomDropdown /> */}
           </Nav>
         </Navbar.Collapse>
       </div>
