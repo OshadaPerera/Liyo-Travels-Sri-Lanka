@@ -27,8 +27,8 @@ function Footer() {
       <div className="row">
         <div className="col">
           <div className="footerLogo">
-          <NavLink to="/">
-            <img src={Logo} alt="Liyo Travels Logo" />
+            <NavLink to="/">
+              <img src={Logo} alt="Liyo Travels Logo" />
             </NavLink>
           </div>
           <p>{currentContent.description}</p>
@@ -41,22 +41,24 @@ function Footer() {
             </div>
           </h3>
           <p>
-            <FontAwesomeIcon icon={faLocationDot} /> {currentContent.office.addressLine1}
+            <FontAwesomeIcon icon={faLocationDot} />{" "}
+            {currentContent.office.addressLine1}
           </p>
           <p>{currentContent.office.addressLine2}</p>
           <p>{currentContent.office.city}</p>
           <p>{currentContent.office.postalCode}</p>
           <p className="footerEmail">
-            <FontAwesomeIcon icon={faEnvelope} />{' '}
+            <FontAwesomeIcon icon={faEnvelope} />{" "}
             <span>
               <a href={`mailto:${currentContent.office.email}`}>
                 {currentContent.office.email}
               </a>
             </span>
           </p>
-          <p>
-            {/* <FontAwesomeIcon icon={faPhone} /> {currentContent.office.phone} */}
-          </p>
+          {/* This is the phone number */}
+          {/* <p>
+            <FontAwesomeIcon icon={faPhone} /> {currentContent.office.phone}
+          </p> */}
         </div>
         <div className="col footerlinks">
           <h3>
@@ -95,8 +97,16 @@ function Footer() {
       </div>
       <hr />
       <p className="copyright">
-        {currentContent.copyright} {new Date().getFullYear()} - {currentContent.rightsReserved}.
-        {currentContent.solutionBy} | <span className="designer"><a href="https://www.linkedin.com/in/oshada-perera-3536a1248/" target="new">Oshada Perera</a></span>
+        {currentContent.copyright} {new Date().getFullYear()} -{" "}
+        {currentContent.rightsReserved}.{currentContent.solutionBy} |{" "}
+        <span className="designer">
+          <a
+            href="https://www.linkedin.com/in/oshada-perera-3536a1248/"
+            target="new"
+          >
+            Oshada Perera
+          </a>
+        </span>
       </p>
     </footer>
   );

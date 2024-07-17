@@ -88,11 +88,8 @@ export const content = {
     slogan: { title: "חוו את המופלא" },
     homeWelcome: {
       title: "ברוכים הבאים לליו טורס",
-      description: `At Liyo Travels Sri Lanka, we are dedicated to providing the best travel experience in Sri Lanka. We offer exceptional tour packages and travel services. From landing to departure, we plan every detail for a seamless and unforgettable journey through Sri Lanka.
-
----
-
-ב"Liyo Travels Sri Lanka" אנו מחויבים לספק את חוויית הנסיעה הטובה ביותר בסרי לנקה. אנו מציעים חבילות טיול ושירותי נסיעות יוצאי דופן. מהנחיתה ועד העזיבה, אנו מתכננים כל פרט לחוויה חלקה ובלתי נשכחת ברחבי סרי לנקה.`,
+      description:
+        "בליו טראוולס סרי לנקה, אנו מחויבים לספק את חוויית הנסיעה הטובה ביותר בסרי לנקה. אנו מציעים חבילות טיול ושירותי נסיעות יוצאי דופן. מהנחיתה ועד העזיבה, אנו מתכננים כל פרט לחוויה חלקה ובלתי נשכחת ברחבי סרי לנקה.",
       languageTitle: "השפות שמדריכינו מסוגלים לדבר:",
       languageList: ["אנגלית", "עברית"],
       // languageDescription: "Select your preferred language",
