@@ -31,7 +31,7 @@
 }
 
 .navLogo img {
-  width:80px;
+  width: 80px;
   height: 70px;
   margin-left: 1rem;
 }
@@ -127,10 +127,10 @@
 }
 
 @media screen and (max-width: 992px) {
-  .navbar-collapse {
+  .navBar {
     -webkit-backdrop-filter: blur(10px); /* Safari */
     backdrop-filter: blur(10px); /* Other browsers */
-    background-color: rgba(78, 78, 78, 0.405); /* Transparent background */
+    background-color: rgba(39, 39, 39, 0.759); /* Transparent background */
     border-radius: 10px; /* Rounded corners */
     padding: 1rem; /* Padding around navbar */
     margin-top: 0.5rem; /* Adjust margin */

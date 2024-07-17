@@ -28,7 +28,7 @@ function ContactUs() {
 
   return (
     <div className="contactBody">
-      <NavBar />
+      <NavBar theme="white"/>
       <div className="contact-us">
         <div className="contactHeadingSection" ref={contactHeadRef}>
           <h2>{currentContent.title}</h2>
