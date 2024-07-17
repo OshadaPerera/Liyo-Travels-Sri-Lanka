@@ -26,7 +26,7 @@
 
 /* Container for contact-us section */
 .contact-us {
-  margin-top: 4rem;
+  margin-top: 6rem;
   padding: 20px;
   text-align: center;
   z-index: 11;
@@ -46,14 +46,39 @@
   color: #fff;
 }
 
-.contactHeadingSection h2 {
+/* Contact page transition animation styles  */
+.contactHeadingSection h2,
+.contactHeadingSection p,
+.contactHeadingSection .contact-methods,
+.addressNfollow,
+.map,
+.contact-form {
   opacity: 0; /* Start hidden */
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-  text-align: center;
 }
 
 .contactHeadingSection.visible h2 {
   animation: fadeUpAnimation 2s ease forwards;
+}
+
+.contactHeadingSection.visible p {
+  animation: fadeRightAnimation 2s ease forwards;
+}
+
+.contactHeadingSection.visible .contact-methods {
+  animation: fadeLeftAnimation 2s ease forwards;
+}
+
+.addressNfollow.visible {
+  animation: fadeDownAnimation 2s ease forwards;
+}
+
+.map.visible {
+  animation: fadeRightAnimation 2s ease forwards;
+}
+
+.contact-form.visible {
+  animation: fadeLeftAnimation 2s ease forwards;
 }
 
 /* Flex container for contact methods */
@@ -246,8 +271,7 @@
 
 /* Media Queries for responsiveness */
 @media (max-width: 768px) {
-
-  .contact-us{
+  .contact-us {
     margin-top: 7rem;
   }
   .addressNfollow {
