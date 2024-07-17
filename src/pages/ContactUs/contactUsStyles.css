@@ -24,8 +24,6 @@
   z-index: 0;
 }
 
-
-
 /* Container for contact-us section */
 .contact-us {
   margin-top: 4rem;
@@ -86,6 +84,7 @@
 .contact-methods a:nth-child(2) {
   background: #00ffcc;
 }
+
 /* Hover effect for contact method links */
 .contact-methods a:nth-child(1):hover {
   background: #1b5500;
@@ -146,7 +145,7 @@
 
 /* Paragraph style for additional content */
 .additional-content p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 20px;
 }
 
@@ -220,7 +219,7 @@
   display: block;
   margin-bottom: 5px;
   font-weight: 600;
-  color:white;
+  color: white;
 }
 
 .contact-form input,
@@ -243,4 +242,58 @@
 
 .contact-form button:hover {
   background-color: #555;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+
+  .contact-us{
+    margin-top: 7rem;
+  }
+  .addressNfollow {
+    flex-direction: column;
+    padding: 10px;
+    width: 95%;
+  }
+
+  .contact-methods a {
+    margin: 10px 10px;
+    padding: 10px 10px;
+  }
+
+  .contactAnimation {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .map iframe {
+    width: 100%;
+    height: 300px;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 10px 20px;
+  }
+
+  .additional-content {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-methods a {
+    margin: 5px 5px;
+    padding: 5px 10px;
+    font-size: 1rem;
+  }
+
+  .contact-methods a svg {
+    font-size: 1.2rem;
+    margin-right: 5px;
+  }
+
+  .contact-form {
+    padding: 10px 10px;
+  }
 }
