@@ -24,7 +24,9 @@ function ContactUs() {
 
   // Use the custom hook for each section to observe visibility
   const contactHeadRef = useIntersectionObserver({ threshold: 0.1 });
-  // const homeChooseRef = useIntersectionObserver({ threshold: 0.1 });
+  const addressRef = useIntersectionObserver({ threshold: 0.1 });
+  const contactMapRef = useIntersectionObserver({ threshold: 0.1 });
+  const contactFormRef = useIntersectionObserver({ threshold: 0.1 });
 
   return (
     <div className="contactBody">
@@ -58,7 +60,7 @@ function ContactUs() {
         </div>
         {/* Additional Content */}
         <div className="additional-content">
-          <div className="addressNfollow">
+          <div className="addressNfollow" ref={addressRef}>
             <div className="address">
               <h3>{currentContent.addressTitle}</h3>
               <p>
@@ -93,16 +95,16 @@ function ContactUs() {
             </p>
           </div> */}
           </div>
-          <div className="map">
+          <div className="map" ref={contactMapRef}>
             <iframe
-              src={currentContent.mapEmbedUrl}
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.073292073073!2d79.8613663147725!3d6.9274229950000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25a0b4d4b4b3d%3A0x1b3b3b3b3b3b3b3b!2sLiyo%20Travels!5e0!3m2!1sen!2slk!4v1629783660004!5m2!1sen!2slk"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
-          <div className="contact-form">
+          <div className="contact-form" ref={contactFormRef}>
             <h3>{currentContent.formTitle}</h3>
             <form action="https://example.com/contact" method="post">
               <div>

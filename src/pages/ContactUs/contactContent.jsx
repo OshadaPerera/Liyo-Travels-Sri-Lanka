@@ -13,8 +13,6 @@ export const contactContent = {
     phoneTitle: "Phone Number",
     phone: "+94 123 456 789",
     mapTitle: "Our Location",
-    mapEmbedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.9774200282223!2d90.41251831429955!3d23.81033279865914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c748dbfb4d0f%3A0x1d3c3e3bc5d0f5c5!2sGoogle!5e0!3m2!1sen!2sbd!4v1621838472501!5m2!1sen!2sbd",
     formTitle: "Send Us a Message",
     nameLabel: "Name",
     emailLabel: "Email",
@@ -35,8 +33,6 @@ export const contactContent = {
     phoneTitle: "מספר טלפון",
     phone: "+94 123 456 789",
     mapTitle: "המיקום שלנו",
-    mapEmbedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.9774200282223!2d90.41251831429955!3d23.81033279865914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c748dbfb4d0f%3A0x1d3c3e3bc5d0f5c5!2sGoogle!5e0!3m2!1she!2sil!4v1621838472501!5m2!1she!2sil",
     formTitle: "שלח לנו הודעה",
     nameLabel: "שם",
     emailLabel: "אימייל",
