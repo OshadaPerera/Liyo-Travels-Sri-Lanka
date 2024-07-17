@@ -1,71 +1,196 @@
+/* Reset margin, padding, and box-sizing for all elements */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Background gradient for the contact page */
+.contactBody {
+  background-color: rgb(223, 223, 223);
+}
+
+/* Container for contact-us section */
 .contact-us {
   margin-top: 4rem;
   padding: 20px;
   text-align: center;
 }
 
-.contact-us h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+/* Heading style */
+.contact-us h2 {
+  margin-bottom: 2.5rem;
 }
 
+/* Paragraph style */
 .contact-us p {
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
 
+.contactHeadingSection h2 {
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  text-align: center;
+}
+
+.contactHeadingSection.visible h2 {
+  animation: fadeUpAnimation 2s ease forwards;
+}
+
+/* Flex container for contact methods */
 .contact-methods {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
+/* Individual contact method link */
 .contact-methods a {
   display: flex;
   align-items: center;
-  margin: 10px;
+  margin: 10px 25px;
   padding: 10px 20px;
-  border: 2px solid #ddd;
-  border-radius: 5px;
+  border-radius: 10px;
+  border: 1px solid #70707088;
   text-decoration: none;
   color: #333;
   font-size: 1.2rem;
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.5s, color 0.3s;
 }
 
-.contact-methods a:hover {
-  background: #f1f1f1;
+.contact-methods a:nth-child(1) {
+  background: #48e300;
 }
 
+.contact-methods a:nth-child(2) {
+  background: #00ffcc;
+}
+/* Hover effect for contact method links */
+.contact-methods a:nth-child(1):hover {
+  background: #1b5500;
+  color: white;
+}
+
+.contact-methods a:nth-child(2):hover {
+  background: #007860;
+}
+
+.contact-methods a:nth-child(1):hover,
+.contact-methods a:nth-child(2):hover {
+  color: white;
+  border: 1px solid #ffffffc4;
+  text-shadow: 0px 0px 5px #ffffff;
+}
+
+/* Icon style within contact method links */
 .contact-methods a svg {
   margin-right: 10px;
   font-size: 1.5rem;
 }
 
+/* Animation container */
+.contactAnimation {
+  width: 30rem;
+  margin-top: 2rem;
+  margin: 0 auto;
+}
+
+/* Container for additional content */
 .additional-content {
   margin-top: 30px;
   text-align: left;
   margin-left: 2rem;
 }
 
+/* Flex container for address and follow us sections */
+.addressNfollow {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-top: 1rem;
+  background-color: #ffb300c5;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #3434348a;
+  color: #f1f1f1;
+  max-width: 70%;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+/* Heading style for additional content */
 .additional-content h3 {
   font-size: 1.6rem;
   margin-bottom: 1.5rem;
 }
 
+/* Paragraph style for additional content */
 .additional-content p {
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
 
+/* Follow us section styling */
+.fbIcon,
+.instaIcon {
+  font-size: 2rem;
+  margin: 0 1rem;
+}
+
+.fbIcon {
+  color: #0050fe;
+}
+
+.instaIcon {
+  color: #ff007f;
+}
+
+.fbIcon:hover,
+.instaIcon:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.fbIcon:hover {
+  color: #ffffff;
+}
+
+.instaIcon:hover {
+  color: #ffffff;
+}
+
+/* Map container */
+.map {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* Style for the iframe map */
+.map iframe {
+  width: 70%;
+  height: 450px;
+  border: none;
+  margin: 0 auto; /* Center the iframe horizontally */
+  border-radius: 15px;
+}
+
+/* Contact form styling */
 .contact-form {
   margin-top: 20px;
   margin-left: 2rem;
+  background-color: #00d6ac;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #3434348a;
+  margin-bottom: 3rem;
+}
+
+.contact-form h3 {
+  color: white;
 }
 
 .contact-form form div {
@@ -75,7 +200,7 @@
 .contact-form label {
   display: block;
   margin-bottom: 5px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .contact-form input,
@@ -98,12 +223,4 @@
 
 .contact-form button:hover {
   background-color: #555;
-}
-
-.map iframe {
-  width: 80%;
-  height: 450px;
-  border: none;
-  margin: 0 auto; /* Center the iframe horizontally */
-  margin-top: 20px;
 }
