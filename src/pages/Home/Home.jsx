@@ -8,6 +8,7 @@ import Destinations from "../../components/DestinationCards/Destinations";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import "./homeStyles.css";
 import "../../components/styles/animations.css"; // Import CSS for animations
+import { Link } from "react-router-dom";
 
 const Home = () => {
   // Get the current language from the LanguageContext
@@ -92,10 +93,13 @@ const Home = () => {
 
             <p>{currentContent.homeBook.content}</p>
 
-            <button className="bookButton">
-              <span>{currentContent.homeBook.book}</span>
-              <i></i>{" "}
-            </button>
+            {/* Linked to the contat us page  */}
+            <Link to="/contact">
+              <button className="bookButton">
+                <span>{currentContent.homeBook.book}</span>
+                <i></i>{" "}
+              </button>
+            </Link>
             <div className="bookAnimation">
               <dotlottie-player
                 src="https://lottie.host/811c1632-33c1-44a2-b106-dcb9e08f48c8/YlPbrW5waM.json"

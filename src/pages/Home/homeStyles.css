@@ -124,12 +124,21 @@
   animation: fadeLeftAnimation 2s ease forwards;
 }
 
+.homeWelcome .welcomeLanguage {
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.homeWelcome.visible .welcomeLanguage {
+  animation: fadeRightAnimation 2s ease forwards;
+}
+
 .welcomeAnimation {
   height: 17rem;
 }
 
 .welcomeLanguage {
-  margin-left: 1rem;
+  text-align: center;
 }
 .welcomeLanguage li {
   line-height: 1.7;
@@ -221,6 +230,7 @@
   margin-top: 3rem;
   text-align: center;
 }
+
 .homeBook p {
   padding: 0 1rem;
 }
@@ -229,8 +239,37 @@
   height: 20rem;
 }
 
+/* Home book transition animations */
+
+.homeBook h2 {
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.homeBook.visible h2 {
+  animation: fadeUpAnimation 2s ease forwards;
+}
+
+.homeBook p {
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.homeBook.visible p {
+  animation: fadeLeftAnimation 2s ease forwards;
+}
+
+.homeBook .bookAnimation {
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.homeBook.visible .bookAnimation {
+  animation: fadeDownAnimation 2s ease forwards;
+}
+
 /* Book button */
-.homeBook button {
+.bookNow button {
   position: relative;
   background: #b3b3b3;
   color: #fff;
@@ -244,7 +283,7 @@
   border-radius: 10px;
 }
 
-.homeBook button:hover {
+.bookNow button:hover {
   letter-spacing: 0.2rem;
   padding: 1.1rem 2.1rem;
   background: #fff200;
@@ -253,7 +292,7 @@
   animation: box 3s infinite;
 }
 
-.homeBook button::before {
+.bookNow button::before {
   content: "";
   position: absolute;
   inset: 2px;
@@ -261,17 +300,17 @@
   border-radius: 10px;
 }
 
-.homeBook button span {
+.bookNow button span {
   position: relative;
   z-index: 1;
 }
-.homeBook button i {
+.bookNow button i {
   position: absolute;
   inset: 0;
   display: block;
 }
 
-.homeBook button i::before {
+.bookNow button i::before {
   content: "";
   position: absolute;
   width: 10px;
@@ -284,13 +323,13 @@
   transition: 0.2s;
 }
 
-.homeBook button:hover i::before {
+.bookNow button:hover i::before {
   width: 15px;
   left: 20%;
   animation: move 3s infinite;
 }
 
-.homeBook button i::after {
+.bookNow button i::after {
   content: "";
   position: absolute;
   width: 10px;
@@ -303,7 +342,7 @@
   transition: 0.2s;
 }
 
-.homeBook button:hover i::after {
+.bookNow button:hover i::after {
   width: 15px;
   left: 80%;
   animation: move 3s infinite;

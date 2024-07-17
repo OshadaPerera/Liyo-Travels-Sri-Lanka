@@ -10,7 +10,7 @@ export const footerContent = {
   en: {
     title: "Liyo Travels Sri Lanka",
     description:
-      "We are a travel agency that provides the best travel experience to our customers. We provide the best tour packages and travel services.",
+      "At Liyo Travels Sri Lanka, we craft unforgettable journeys with unparalleled tour packages and exceptional travel services. Our mission is to provide the ultimate travel experience, ensuring every adventure is seamless and memorable. ",
     office: {
       title: "Office",
       addressLine1: "No.425/B",
@@ -44,7 +44,7 @@ export const footerContent = {
   he: {
     title: "ליו טרוולס סרי לנקה",
     description:
-      "אנו סוכנות נסיעות המספקת את חווית הנסיעה הטובה ביותר ללקוחותינו. אנו מספקים את חבילות הטיול ושירותי הנסיעות הטובים ביותר.",
+      "בליו טראוולס סרי לנקה, אנו יוצרים מסעות בלתי נשכחים עם חבילות טיול יוצאות דופן ושירותי נסיעות מעולים. המשימה שלנו היא לספק את חוויית הנסיעה האולטימטיבית, ולוודא שכל הרפתקה תהיה חלקה ובלתי נשכחת.",
     office: {
       title: "משרד",
       addressLine1: "מס' 425/ב",

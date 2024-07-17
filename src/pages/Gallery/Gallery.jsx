@@ -5,6 +5,8 @@ import NavBar from "../../components/Navbar/NavBar";
 import Footer from "../../components/Footer/Footer";
 import "./galleryStyles.css";
 function Gallery() {
+  const { language } = useContext(LanguageContext);
+  const currentContent = GalleryContent[language];
   return (
     <div>
       <NavBar />
