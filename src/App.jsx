@@ -16,7 +16,6 @@ import { LanguageProvider } from "./components/languageContext"; // Importing th
 //Import the loader component
 import Loader from "./components/Loader"; // Loader component
 
-
 // Main App component
 function App() {
   //Loader state
@@ -42,13 +41,13 @@ function App() {
         <Routes>
           {/* Route component to define the path and the corresponding component to render */}
           <Route path="/" element={<Home />} /> {/* Route for the Home page */}
-          <Route path="/gallery" element={<Gallery />} />{" "}
+          <Route path="/gallery" element={<Gallery />} />
           {/* Route for the Gallery page */}
-          <Route path="/about" element={<AboutUs />} />{" "}
+          <Route path="/about" element={<AboutUs />} />
           {/* Route for the About Us page */}
-          <Route path="/contact" element={<ContactUs />} />{" "}
+          <Route path="/contact" element={<ContactUs />} />
           {/* Route for the Contact Us page */}
-          <Route path="*" element={<NoPage />} />{" "}
+          <Route path="*" element={<NoPage />} />
           {/* Route for handling undefined paths */}
         </Routes>
       </BrowserRouter>
