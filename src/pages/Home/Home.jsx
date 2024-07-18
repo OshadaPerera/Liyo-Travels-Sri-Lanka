@@ -1,5 +1,5 @@
 // Import necessary modules and components from React and other files
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { LanguageContext } from "../../components/languageContext";
 import { content } from "./HomeContent";
 import NavBar from "../../components/Navbar/NavBar";
@@ -14,6 +14,11 @@ const Home = () => {
   // Get the current language from the LanguageContext
   const { language } = useContext(LanguageContext);
   const currentContent = content[language];
+
+  // Use useEffect to scroll to the top of the page whenever the location changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   // Use the custom hook for each section to observe visibility
   const homeWelcomeRef = useIntersectionObserver({ threshold: 0.1 });

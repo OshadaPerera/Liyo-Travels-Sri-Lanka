@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { LanguageContext } from "../../components/languageContext";
 import { GalleryContent } from "./GalleryContent";
 import NavBar from "../../components/Navbar/NavBar";
@@ -7,6 +7,12 @@ import "./galleryStyles.css";
 function Gallery() {
   const { language } = useContext(LanguageContext);
   const currentContent = GalleryContent[language];
+
+  // Use useEffect to scroll to the top of the page whenever the location changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <div>
       <NavBar />

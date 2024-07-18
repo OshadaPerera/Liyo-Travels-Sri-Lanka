@@ -1,26 +1,33 @@
-import React, { useContext } from "react";
-import { LanguageContext } from "../../components/languageContext";
-import { contactContent } from "./contactContent"; // Import content for both languages
-import NavBar from "../../components/Navbar/NavBar";
-import Footer from "../../components/Footer/Footer";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useContext, useEffect } from "react"; // Import React, useContext, and useEffect
+import { useLocation } from "react-router-dom"; // Import useLocation from react-router-dom for handling location changes
+import { LanguageContext } from "../../components/languageContext"; // Import LanguageContext for language switching
+import { contactContent } from "./contactContent"; // Import the content for the Contact Us page based on language
+import NavBar from "../../components/Navbar/NavBar"; // Import the NavBar component
+import Footer from "../../components/Footer/Footer"; // Import the Footer component
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import FontAwesomeIcon for icons
 import {
   faFacebook,
   faInstagram,
   faWhatsapp,
-} from "@fortawesome/free-brands-svg-icons";
+} from "@fortawesome/free-brands-svg-icons"; // Import specific icons from FontAwesome
 import {
   faMapMarkerAlt,
   faPhone,
   faEnvelope,
-} from "@fortawesome/free-solid-svg-icons";
-import "./contactUsStyles.css";
-import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+} from "@fortawesome/free-solid-svg-icons"; // Import specific solid icons from FontAwesome
+import "./contactUsStyles.css"; // Import the CSS file for styling
+import useIntersectionObserver from "../../hooks/useIntersectionObserver"; // Import a custom hook for intersection observer
 
 function ContactUs() {
-  // Get the current language from the LanguageContext
-  const { language } = useContext(LanguageContext);
-  const currentContent = contactContent[language];
+  const { language } = useContext(LanguageContext); // Use the LanguageContext to get the current language
+  const currentContent = contactContent[language]; // Get the content based on the current language
+
+  const location = useLocation(); // Use useLocation to get the current location
+
+  // Use useEffect to scroll to the top of the page whenever the location changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   // Use the custom hook for each section to observe visibility
   const contactHeadRef = useIntersectionObserver({ threshold: 0.1 });
@@ -30,7 +37,7 @@ function ContactUs() {
 
   return (
     <div className="contactBody">
-      <NavBar theme="white"/>
+      <NavBar theme="white" />
       <div className="contact-us">
         <div className="contactHeadingSection" ref={contactHeadRef}>
           <h2>{currentContent.title}</h2>
@@ -124,7 +131,9 @@ function ContactUs() {
                   required
                 ></textarea>
               </div>
-              <button className="submitButton" type="submit">{currentContent.submitButton}</button>
+              <button className="submitButton" type="submit">
+                {currentContent.submitButton}
+              </button>
             </form>
           </div>
         </div>

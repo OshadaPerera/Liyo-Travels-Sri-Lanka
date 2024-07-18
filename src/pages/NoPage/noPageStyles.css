@@ -1,17 +1,17 @@
 /* Custom styles for NoPage component */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .noPage {
-    background-color: #f8f9fa;
-    text-align: center;
-    padding: 0 20px;
-  }
-  
-  .display-1 {
+  background-color: #dadada;
+  text-align: center;
+  height: 100vh;
+}
+
+/* .display-1 {
     margin-bottom: 1rem;
     font-size: 6rem;
     color: #343a40;
@@ -22,5 +22,15 @@
     font-size: 1.5rem;
     color: #6c757d;
     margin-bottom: 2rem;
+  } */
+
+.noPageAnimation {
+  height: 60vh;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .noPage {
+    height: 100vh;
   }
-  
+}
