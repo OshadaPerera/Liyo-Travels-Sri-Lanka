@@ -15,8 +15,7 @@ function AboutUs() {
 
   return (
     <div className="aboutBody">
-      <NavBar theme="white" />{" "}
-      {/* Render the NavBar component with a white theme */}
+      <NavBar /> {/* Render the NavBar component with a white theme */}
       <div className="about-us">
         <div className="aboutHeadingSection">
           <h2>{currentContent.title}</h2> {/* Render the title */}
