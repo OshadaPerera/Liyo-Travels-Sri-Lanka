@@ -152,7 +152,7 @@
   justify-content: space-evenly;
   text-align: center;
   margin-top: 1rem;
-  background-color: #d9d9d9a9;
+  background-color: #ffffffcc;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 0 10px #3434348a;
@@ -230,14 +230,17 @@
   border-radius: 15px;
   box-shadow: 0 0 10px #3434348a;
   margin-bottom: 3rem;
+  text-align: right; /* Align contents to the right */
 }
 
 .contact-form h3 {
   color: white;
+  text-align: left; /* Ensures the title remains left-aligned */
 }
 
 .contact-form form div {
   margin-bottom: 10px;
+  text-align: left; /* Ensures form elements remain left-aligned */
 }
 
 .contact-form label {
@@ -253,6 +256,7 @@
   padding: 8px;
   border: 1px solid #ddd;
   border-radius: 5px;
+  display: block; /* Ensures full-width input fields */
 }
 
 .contact-form button {
@@ -263,6 +267,9 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
+  transition: background-color 0.3s;
+  display: inline-block; /* Ensures the button aligns correctly */
+  margin-top: 10px;
 }
 
 .contact-form button:hover {

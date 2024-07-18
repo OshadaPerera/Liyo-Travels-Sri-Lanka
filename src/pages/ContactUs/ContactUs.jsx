@@ -124,7 +124,7 @@ function ContactUs() {
                   required
                 ></textarea>
               </div>
-              <button type="submit">{currentContent.submitButton}</button>
+              <button className="submitButton" type="submit">{currentContent.submitButton}</button>
             </form>
           </div>
         </div>
