@@ -1,19 +1,32 @@
+/* Reset and box-sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* src/pages/AboutUs/aboutUsStyles.css */
-
+/* Body styling */
 .aboutBody {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
   color: #333;
 }
 
-.about-us {
-  padding: 1rem 2rem ;
-  margin-top: 5rem;
+/* Animation styling */
+.aboutUsAnimation {
+  top: 0;
+  left: 0;
+  height: 30vh;
+  width: 50vw;
+  pointer-events: none; /* Make sure the animation doesn't interfere with user interactions */
+}
 
+/* Content styling */
+.about-us {
+  position: relative; /* Ensures that the content is positioned above the animation */
+  padding: 1rem 2rem;
+  margin-top: 5rem;
 }
 
 .aboutHeadingSection {

@@ -1,5 +1,3 @@
-// src/pages/AboutUs/AboutUs.jsx
-
 import React, { useContext, useEffect } from "react";
 import { LanguageContext } from "../../components/languageContext";
 import NavBar from "../../components/Navbar/NavBar";
@@ -23,6 +21,16 @@ function AboutUs() {
         <div className="aboutHeadingSection">
           <h2>{currentContent.title}</h2> {/* Render the title */}
           <p>{currentContent.description}</p> {/* Render the description */}
+          {/* <div className="aboutUsAnimation">
+            <dotlottie-player
+              src="https://lottie.host/ebb8df0b-da55-40a2-88df-ef4bebe2a7ef/aPAKy9okXa.json"
+              background="transparent"
+              speed="1"
+              loop
+              autoplay
+              style={{ width: "100%", height: "100%" }}
+            ></dotlottie-player>
+          </div> */}
         </div>
         {/* Mission Section */}
         <div className="aboutSection">

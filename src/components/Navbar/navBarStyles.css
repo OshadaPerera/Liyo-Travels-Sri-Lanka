@@ -103,7 +103,7 @@
 .nav-link.active {
   border: 2px solid #ffee10;
   box-shadow: 0 0 5px #ffee10;
-  color: rgb(255, 255, 255) !important;
+  color: var(--bg-color) !important;
   text-shadow: 0 0 5px #ffee10;
   position: relative;
   border-radius: 5px;
