@@ -277,7 +277,10 @@
   .addressNfollow {
     flex-direction: column;
     padding: 10px;
-    width: 95%;
+  }
+
+  .address {
+    width: 100%;
   }
 
   .contact-methods a {
@@ -319,5 +322,9 @@
 
   .contact-form {
     padding: 10px 10px;
+  }
+  .addressNfollow {
+    width: 100%;
+    padding: 10px;
   }
 }
