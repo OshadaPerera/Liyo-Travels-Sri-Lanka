@@ -43,7 +43,7 @@ export const content = {
     slogan: { title: "Experience the Extraordinary" },
 
     homeWelcome: {
-      title: "Welcome to Liyo Travels",
+      title: "Welcome to Liyo Travels Sri Lanka",
       description: `At Liyo Travels Sri Lanka, we are dedicated to providing the best travel experience in Sri Lanka. We offer exceptional tour packages and travel services. From landing to departure, we plan every detail for a seamless and unforgettable journey through Sri Lanka.`,
       languageTitle: "Languages Spoken by Our Expert Guides:",
       languageList: ["English", "Hebrew"],

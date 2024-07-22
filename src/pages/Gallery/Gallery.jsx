@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { LanguageContext } from "../../components/languageContext";
-import { GalleryContent } from "./GalleryContent";
+import { GalleryContent, GalleryImages } from "./GalleryContent";
 import NavBar from "../../components/Navbar/NavBar";
 import Footer from "../../components/Footer/Footer";
 import "./galleryStyles.css";
@@ -19,6 +19,19 @@ function Gallery() {
       <div className="galleryContainer">
         <p>{currentContent.galleryIntro.title}</p>
       </div>
+
+      <div className="gallery">
+        {GalleryImages.map((image) => (
+          <div key={image.id} className="galleryImage">
+            <img src={image.src} alt={image.title} />
+            <p>{image.title}</p>
+            <a href={image.location} target="_blank" rel="noreferrer">
+              View Location
+            </a>
+          </div>
+        ))}
+      </div>
+
       {/* <Footer /> Footer component */}
     </div>
   );

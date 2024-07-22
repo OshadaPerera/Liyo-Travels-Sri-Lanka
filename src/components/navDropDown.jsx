@@ -1,5 +1,3 @@
-// src/components/CustomDropdown.js
-
 import React, { useState, useRef, useEffect, useContext } from "react";
 import { LanguageContext } from "./languageContext"; // Importing the LanguageContext
 import UKflag from "../assets/images/ukflag.png";
@@ -7,13 +5,12 @@ import Israel from "../assets/images/israel.png";
 import "./styles/navDropDownStyles.css";
 
 function CustomDropdown({ isInFooter }) {
+  const { language, toggleLanguage } = useContext(LanguageContext);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState({
-    language: "Hebrew",
-    flag: Israel,
+    language: language === "en" ? "English" : "עִברִית",
+    flag: language === "en" ? UKflag : Israel,
   });
-
-  const { toggleLanguage } = useContext(LanguageContext);
 
   const dropdownRef = useRef(null);
 
@@ -39,6 +36,14 @@ function CustomDropdown({ isInFooter }) {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  useEffect(() => {
+    // Update selectedLanguage based on the current language context
+    setSelectedLanguage({
+      language: language === "en" ? "English" : "עִברִית",
+      flag: language === "en" ? UKflag : Israel,
+    });
+  }, [language]); // Dependency array ensures this runs when language changes
 
   return (
     <div
