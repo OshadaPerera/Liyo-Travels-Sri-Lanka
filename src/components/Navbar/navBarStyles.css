@@ -131,12 +131,23 @@
     -webkit-backdrop-filter: blur(10px); /* Safari */
     backdrop-filter: blur(10px); /* Other browsers */
     background-color: rgba(39, 39, 39, 0.759); /* Transparent background */
-    border-radius: 10px; /* Rounded corners */
-    padding: 1rem; /* Padding around navbar */
-    margin-top: 0.5rem; /* Adjust margin */
+    border-radius: 0 0 15px 15px; /* Rounded corners */
+    padding: 0.1rem; /* Padding around navbar */
+    margin: 0;
+    color: white !important; /* Set text color to white */
   }
   .nav-link {
     display: block; /* Display links as block elements */
     margin: 0.5rem 0; /* Adjust margin */
+    color: white !important; /* White text color for links */
+  }
+  .navbar-light .navbar-nav .nav-link {
+    color: white !important; /* Override default navbar-light link color */
+  }
+  .navbar-light .navbar-brand {
+    color: white !important; /* Override default navbar-light brand color */
+  }
+  .navbar-toggler {
+    border-color: white !important; /* White border color for toggler */
   }
 }

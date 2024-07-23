@@ -14,8 +14,6 @@ function NavBar({ theme }) {
   // Determine the color classes based on the theme prop
   const navbarColorClass = theme === "white" ? "navbar-light" : "navbar-dark";
   const textColorClass = theme === "white" ? "text-light" : "text-dark";
-  const togglerColorClass =
-    theme === "white" ? "toggler-light" : "toggler-dark";
 
   return (
     <Navbar
@@ -27,13 +25,13 @@ function NavBar({ theme }) {
         <Navbar.Brand
           as={NavLink}
           to="/"
-          className={`navLogo ${textColorClass}`}
+          className={`navLogo`}
         >
           <img src={Logo} alt="Liyo Travels Logo" />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="navbarNav"
-          className={togglerColorClass}
+          className="toggler-light" // Always apply white theme for the toggler
         />
         <Navbar.Collapse id="navbarNav">
           <Nav className={`ms-auto ${textColorClass}`}>
