@@ -98,7 +98,7 @@ function Footer() {
       <hr />
       <p className="copyright">
         {currentContent.copyright} {new Date().getFullYear()} -{" "}
-        {currentContent.rightsReserved}.{currentContent.solutionBy} |{" "}
+        {currentContent.rightsReserved}. {currentContent.solutionBy} | {"  "}
         <span className="designer">
           <a
             href="https://www.linkedin.com/in/oshada-perera-3536a1248/"
