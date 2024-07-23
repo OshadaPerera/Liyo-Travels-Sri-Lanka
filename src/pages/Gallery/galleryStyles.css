@@ -4,6 +4,34 @@
   box-sizing: border-box;
 }
 
+.galleryContainer {
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.galleryContainer p {
+  margin-top: 0.5rem;
+}
+
+.galleryContainer h2,
+.galleryContainer p,
+.gallery {
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.galleryContainer.visible h2 {
+  animation: fadeUpAnimation 2s ease forwards;
+}
+
+.galleryContainer.visible p {
+  animation: fadeLeftAnimation 2s ease forwards;
+}
+
+.gallery.visible {
+  animation: fadeRightAnimation 2s ease forwards;
+}
+
 .gallery {
   -webkit-column-count: 3;
   -moz-column-count: 3;
@@ -12,24 +40,122 @@
   -moz-column-width: 33%;
   column-width: 33%;
   padding: 0 12px;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 
 .galleryImage {
+  position: relative; /* Ensure overlay positions relative to the image */
   -webkit-transition: all 350ms ease;
   transition: all 350ms ease;
   cursor: pointer;
   margin-bottom: 12px;
 }
 
-.galleryImage:hover {
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
-}
-
 .galleryImage img {
   width: 100%;
   height: auto;
   border-radius: 8px;
+}
+
+.galleryImage:hover {
+  filter: opacity(0.8);
+}
+
+.galleryImage .imageOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(2, 0, 36);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(241, 255, 0, 0.23301820728291311) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(241, 255, 0, 0.23301820728291311) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(241, 255, 0, 0.23301820728291311) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#f1ff00",GradientType=1);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  height: 15%;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  opacity: 0;
+  transition: opacity 350ms ease;
+  transform: translateY(10px);
+}
+
+.galleryImage:hover .imageOverlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* model */
+.model {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  transition: opacity 0.4s ease, visibility 0.4s ease,
+    transform 0.5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.model.open {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.model img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  display: block;
+  line-height: 0;
+  box-sizing: 20px 0 20px;
+  margin: 0 auto;
+}
+
+.model.open button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+}
+
+.model.open button:hover {
+  background-color: rgba(255, 255, 255, 0.914);
+  color: black;
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
 }
 
 @media (max-width: 991px) {

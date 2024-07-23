@@ -56,6 +56,7 @@
 @media screen and (max-width: 992px) {
   .custom-dropdown {
     margin-top: 15px;
+    color: #fff;
   }
 
   .dropdown-menu.active {
