@@ -1,12 +1,14 @@
 export const GalleryContent = {
   en: {
     galleryIntro: {
+      heading: "Gallery",
       description:
         "Check out our gallery to see some of the amazing places we have visited with our clients.",
     },
   },
   he: {
     galleryIntro: {
+      heading: "גלריה",
       description:
         "בואו לראות את גלריית התמונות שלנו ולהתרשם מהמקומות המדהימים שביקרנו בהם יחד עם לקוחותינו.",
     },
@@ -22,7 +24,7 @@ export const GalleryImages = [
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1711100360032-c59368872526?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "https://images.unsplash.com/photo-1665849050332-8d5d7e59afb6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Temple of the Tooth",
     location: "https://goo.gl/maps/Vjrx2E3A7fZ2S8t89",
   },
@@ -70,67 +72,55 @@ export const GalleryImages = [
   },
   {
     id: 10,
-    src: "https://images.unsplash.com/photo-1590512534432-2488dbb84a32?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwzNzIwNzR8MHwxfGFsbHwxfHx8fHx8fHwxNjc3NzM5NTYx&ixlib=rb-1.2.1&q=80&w=400",
+    src: "https://images.unsplash.com/photo-1704798690646-92524b61ce03?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Dambulla Cave Temple",
     location: "https://goo.gl/maps/9qR5WnqxJrV9Mmqg9",
   },
   {
     id: 11,
-    src: "https://images.unsplash.com/photo-1566795791-79c85c058d02?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwzNzIwNzR8MHwxfGFsbHwxfHx8fHx8fHwxNjc3NzM5NTYx&ixlib=rb-1.2.1&q=80&w=400",
+    src: "https://images.unsplash.com/photo-1709729519591-2fb2d25395df?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Polonnaruwa",
     location: "https://goo.gl/maps/x8Xqep1m9X2y9RD9A",
   },
   {
     id: 12,
-    src: "https://images.unsplash.com/photo-1566894164-3b4b9ff7f0dc?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwzNzIwNzR8MHwxfGFsbHwxfHx8fHx8fHwxNjc3NzM5NTYx&ixlib=rb-1.2.1&q=80&w=400",
+    src: "https://images.unsplash.com/photo-1653151106766-52f14da3bb68?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Sri Pada (Adam's Peak)",
     location: "https://goo.gl/maps/xC2J9ouGgE5rq3cV6",
   },
   {
     id: 13,
-    src: "https://images.unsplash.com/photo-1567199564-31cdd7b435d1?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwzNzIwNzR8MHwxfGFsbHwxfHx8fHx8fHwxNjc3NzM5NTYx&ixlib=rb-1.2.1&q=80&w=400",
+    src: "https://images.unsplash.com/photo-1589534345827-e619f9b2dd2b?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Mirissa Beach",
     location: "https://goo.gl/maps/m1z6o3p9Lr1G2uE88",
   },
   {
     id: 14,
-    src: "https://images.unsplash.com/photo-1587169075310-1df9182c4f94?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwzNzIwNzR8MHwxfGFsbHwxfHx8fHx8fHwxNjc3NzM5NTYx&ixlib=rb-1.2.1&q=80&w=400",
+    src: "https://images.unsplash.com/photo-1683466388821-1f556f935cb3?q=80&w=1858&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Anuradhapura",
     location: "https://goo.gl/maps/WvJqj1g5LU62",
   },
   {
     id: 15,
-    src: "https://images.unsplash.com/photo-1590843684184-2c79d28c88f3?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwzNzIwNzR8MHwxfGFsbHwxfHx8fHx8fHwxNjc3NzM5NTYx&ixlib=rb-1.2.1&q=80&w=400",
-    title: "Bentota Beach",
-    location: "https://goo.gl/maps/Q3Xpm6EZvAAk3zWm6",
-  },
-  {
-    id: 16,
-    src: "https://images.unsplash.com/photo-1568957125-c8319b35cbec?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwzNzIwNzR8MHwxfGFsbHwxfHx8fHx8fHwxNjc3NzM5NTYx&ixlib=rb-1.2.1&q=80&w=400",
+    src: "https://images.unsplash.com/photo-1665765415963-28b2fa36df8a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Unawatuna Beach",
     location: "https://goo.gl/maps/MrGTAmrcTSU2C3yD8",
   },
   {
+    id: 16,
+    src: "https://images.unsplash.com/photo-1703566324597-9aa71bbab450?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Sinharaja Forest Reserve",
+    location: "https://goo.gl/maps/ScxZZDvu91eN2HvC8",
+  },
+  {
     id: 17,
-    src: "https://images.unsplash.com/photo-1565114111-b2645c0db28d?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwzNzIwNzR8MHwxfGFsbHwxfHx8fHx8fHwxNjc3NzM5NTYx&ixlib=rb-1.2.1&q=80&w=400",
+    src: "https://images.unsplash.com/photo-1581420456035-58b8efadcdea?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Negombo Beach",
     location: "https://goo.gl/maps/6CHf6QmK5gqkFsMD8",
   },
   {
     id: 18,
-    src: "https://images.unsplash.com/photo-1588619309386-7791d17e5d2d?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwzNzIwNzR8MHwxfGFsbHwxfHx8fHx8fHwxNjc3NzM5NTYx&ixlib=rb-1.2.1&q=80&w=400",
-    title: "Sinharaja Forest Reserve",
-    location: "https://goo.gl/maps/ScxZZDvu91eN2HvC8",
-  },
-  {
-    id: 19,
-    src: "https://images.unsplash.com/photo-1562219304-1b1391d4ff5c?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwzNzIwNzR8MHwxfGFsbHwxfHx8fHx8fHwxNjc3NzM5NTYx&ixlib=rb-1.2.1&q=80&w=400",
-    title: "Weligama Beach",
-    location: "https://goo.gl/maps/K8xv4BvgH2G5LGsA9",
-  },
-  {
-    id: 20,
-    src: "https://images.unsplash.com/photo-1532078334087-2990c6797304?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwzNzIwNzR8MHwxfGFsbHwxfHx8fHx8fHwxNjc3NzM5NTYx&ixlib=rb-1.2.1&q=80&w=400",
+    src: "https://images.unsplash.com/photo-1610017810004-a6f3c531df34?q=80&w=2022&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Horton Plains National Park",
     location: "https://goo.gl/maps/3xmfVwE1U8TzVd6R6",
   },

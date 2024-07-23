@@ -278,9 +278,6 @@
 
 /* Media Queries for responsiveness */
 @media (max-width: 768px) {
-  .contact-us {
-    margin-top: 7rem;
-  }
   .addressNfollow {
     flex-direction: column;
     padding: 10px;

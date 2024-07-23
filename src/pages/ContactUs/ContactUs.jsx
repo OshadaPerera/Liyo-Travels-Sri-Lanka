@@ -16,7 +16,7 @@ import {
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons"; // Import specific solid icons from FontAwesome
 import "./contactUsStyles.css"; // Import the CSS file for styling
-import useIntersectionObserver from "../../hooks/useIntersectionObserver"; // Import a custom hook for intersection observer
+import useIntersectionObserver from "../../hooks/useIntersectionObserver"; // Import a custom hook for transition Animations
 
 function ContactUs() {
   const { language } = useContext(LanguageContext); // Use the LanguageContext to get the current language
