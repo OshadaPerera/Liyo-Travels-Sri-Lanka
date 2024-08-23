@@ -1,0 +1,47 @@
+.notification {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: max-content;
+  color: #333;
+  position: fixed; /* Changed to fixed for consistent placement */
+  top: 20px; /* Adjust top positioning */
+  right: 20px; /* Adjust right positioning */
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.notification.success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d;
+}
+
+.notification.error {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+
+.notification.warning {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  top: 5px;
+  right: 10px;
+  margin-left: 1rem;
+}
+
+.close-button:hover {
+  color: #a94442; /* Change color on hover */
+}

@@ -160,6 +160,17 @@
   max-width: 70%;
   margin: 0 auto;
   margin-bottom: 3rem;
+  width: max-content;
+}
+/* QR Code image styles  */
+.qrImg {
+  width: 50%;
+  height: 100%;
+}
+
+.followLinks{
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Heading style for additional content */
