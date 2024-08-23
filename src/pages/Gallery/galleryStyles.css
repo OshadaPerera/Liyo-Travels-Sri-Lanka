@@ -7,6 +7,7 @@
 .galleryContainer {
   margin-top: 6rem;
   text-align: center;
+  padding: 0.5rem;
 }
 
 .galleryContainer p {
@@ -16,7 +17,8 @@
 .galleryContainer h2,
 .galleryContainer p,
 .gallery {
-  opacity: 0; /* Start hidden */
+  opacity: 0;
+  /* Start hidden */
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
@@ -45,7 +47,8 @@
 }
 
 .galleryImage {
-  position: relative; /* Ensure overlay positions relative to the image */
+  position: relative;
+  /* Ensure overlay positions relative to the image */
   -webkit-transition: all 350ms ease;
   transition: all 350ms ease;
   cursor: pointer;
@@ -68,26 +71,20 @@
   left: 0;
   right: 0;
   background: rgb(2, 0, 36);
-  background: -moz-linear-gradient(
-    0deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(241, 255, 0, 0.23301820728291311) 100%
-  );
-  background: -webkit-linear-gradient(
-    0deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(241, 255, 0, 0.23301820728291311) 100%
-  );
-  background: linear-gradient(
-    0deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(241, 255, 0, 0.23301820728291311) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#f1ff00",GradientType=1);
+  background: -moz-linear-gradient(0deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(241, 255, 0, 0.23301820728291311) 100%);
+  background: -webkit-linear-gradient(0deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(241, 255, 0, 0.23301820728291311) 100%);
+  background: linear-gradient(0deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(241, 255, 0, 0.23301820728291311) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024", endColorstr="#f1ff00", GradientType=1);
   color: white;
   text-align: center;
   padding: 10px 0;
-  height: 15%;
+  height: 17%;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   opacity: 0;

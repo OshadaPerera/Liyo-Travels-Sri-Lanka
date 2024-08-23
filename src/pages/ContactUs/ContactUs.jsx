@@ -1,56 +1,105 @@
-import React, { useContext, useEffect } from "react"; // Import React, useContext, and useEffect
-import { useLocation } from "react-router-dom"; // Import useLocation from react-router-dom for handling location changes
-import { LanguageContext } from "../../components/languageContext"; // Import LanguageContext for language switching
-import { contactContent } from "./contactContent"; // Import the content for the Contact Us page based on language
-import NavBar from "../../components/Navbar/NavBar"; // Import the NavBar component
-import Footer from "../../components/Footer/Footer"; // Import the Footer component
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import FontAwesomeIcon for icons
+import React, { useContext, useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import { LanguageContext } from "../../components/languageContext";
+import { contactContent } from "./contactContent";
+import NavBar from "../../components/Navbar/NavBar";
+import Footer from "../../components/Footer/Footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
   faInstagram,
   faWhatsapp,
-} from "@fortawesome/free-brands-svg-icons"; // Import specific icons from FontAwesome
+} from "@fortawesome/free-brands-svg-icons";
 import {
   faMapMarkerAlt,
   faPhone,
   faEnvelope,
-} from "@fortawesome/free-solid-svg-icons"; // Import specific solid icons from FontAwesome
-import "./contactUsStyles.css"; // Import the CSS file for styling
-import useIntersectionObserver from "../../hooks/useIntersectionObserver"; // Import a custom hook for transition Animations
+} from "@fortawesome/free-solid-svg-icons";
+import emailjs from "emailjs-com";
+import "./contactUsStyles.css";
+import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import fbQR from "../../assets/images/qr_codes/fb 1.png";
+import instaQR from "../../assets/images/qr_codes/insta 1.png";
+import Notification from "../../components/notification";
 
 function ContactUs() {
-  const { language } = useContext(LanguageContext); // Use the LanguageContext to get the current language
-  const currentContent = contactContent[language]; // Get the content based on the current language
+  const { language } = useContext(LanguageContext);
+  const currentContent = contactContent[language];
+  const location = useLocation();
+  const [notification, setNotification] = useState({ message: "", type: "" });
 
-  const location = useLocation(); // Use useLocation to get the current location
-
-  // Use useEffect to scroll to the top of the page whenever the location changes
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
-  // Use the custom hook for each section to observe visibility
   const contactHeadRef = useIntersectionObserver({ threshold: 0.1 });
   const addressRef = useIntersectionObserver({ threshold: 0.1 });
   const contactMapRef = useIntersectionObserver({ threshold: 0.1 });
   const contactFormRef = useIntersectionObserver({ threshold: 0.1 });
 
+  const showNotification = (message, type) => {
+    setNotification({ message, type });
+    setTimeout(() => {
+      setNotification({ message: "", type: "" });
+    }, 5000); // Hide the notification after 3 seconds
+  };
+
+  const handleCloseNotification = () => {
+    setNotification({ message: "", type: "" }); // Close the notification
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_gtcaqbv",
+        "template_mlfx2cq",
+        e.target,
+        "jarWRPtLuJteQJhtU"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          showNotification("Message sent successfully!", "success");
+        },
+        (error) => {
+          console.error("EmailJS error:", error);
+          showNotification(
+            "Failed to send message, please try again.",
+            "error"
+          );
+        }
+      )
+      .finally(() => {
+        e.target.reset(); // Ensure the form is reset after the promise is resolved
+      });
+  };
+
   return (
     <div className="contactBody">
       <NavBar theme="white" />
+      {/* Render the notification here */}
+      {notification.message && (
+        <Notification
+          message={notification.message}
+          type={notification.type}
+          onClose={handleCloseNotification} // Pass the close handler
+        />
+      )}
       <div className="contact-us">
         <div className="contactHeadingSection" ref={contactHeadRef}>
           <h2>{currentContent.title}</h2>
           <p>{currentContent.description}</p>
           <div className="contact-methods">
             <a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/message/VICGCNPT3UEWK1"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={faWhatsapp} /> {currentContent.whatsapp}
             </a>
-            <a href="mailto:info@liyotravels.com">
+            <a href="mailto:liyotravelssrilanka@gmail.com">
               <FontAwesomeIcon icon={faEnvelope} />
               {currentContent.email}
             </a>
@@ -65,9 +114,11 @@ function ContactUs() {
             ></dotlottie-player>
           </div>
         </div>
-        {/* Additional Content */}
+
         <div className="additional-content">
-          <div className="addressNfollow" ref={addressRef}>
+          {/* The below code is commented out because the map and address details are not available. Uncomment the code to display the map and address details. */}
+
+          {/* <div className="addressNfollow" ref={addressRef}>
             <div className="address">
               <h3>{currentContent.addressTitle}</h3>
               <p>
@@ -79,14 +130,14 @@ function ContactUs() {
               <h3>{currentContent.followUs}</h3>
               <div className="followLinks">
                 <a
-                  href="https://www.facebook.com/yourpage"
+                  href="https://www.facebook.com/people/Liyo-Travels-Sri-Lanka/61564623182427/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FontAwesomeIcon icon={faFacebook} className="fbIcon" />
                 </a>
                 <a
-                  href="https://www.instagram.com/yourpage"
+                  href="https://www.instagram.com/liyo_travels_sl/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -94,14 +145,8 @@ function ContactUs() {
                 </a>
               </div>
             </div>
-
-            {/* <div className="phone">
-            <h3>{currentContent.phoneTitle}</h3>
-            <p>
-              <FontAwesomeIcon icon={faPhone} /> {currentContent.phone}
-            </p>
-          </div> */}
           </div>
+
           <div className="map" ref={contactMapRef}>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.073292073073!2d79.8613663147725!3d6.9274229950000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25a0b4d4b4b3d%3A0x1b3b3b3b3b3b3b3b!2sLiyo%20Travels!5e0!3m2!1sen!2slk!4v1629783660004!5m2!1sen!2slk"
@@ -110,17 +155,67 @@ function ContactUs() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
+          </div> */}
+
+          {/* Remove the below code when the address is added */}
+          <div className="addressNfollow" ref={addressRef}>
+            <div className="followus">
+              <h3>{currentContent.followUs}</h3>
+              <div className="followLinks">
+                <a
+                  href="https://www.facebook.com/people/Liyo-Travels-Sri-Lanka/61564623182427/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img className="qrImg" src={fbQR} alt="fb QR Code" />
+                </a>
+                <a
+                  href="https://www.instagram.com/liyo_travels_sl/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img className="qrImg" src={instaQR} alt="insta QR Code" />
+                </a>
+              </div>
+            </div>
           </div>
+
+          {/* Remove up to here */}
+
           <div className="contact-form" ref={contactFormRef}>
             <h3>{currentContent.formTitle}</h3>
-            <form action="https://example.com/contact" method="post">
+            <form onSubmit={sendEmail}>
               <div>
-                <label htmlFor="name">{currentContent.nameLabel}</label>
-                <input type="text" id="name" name="name" required />
+                <label htmlFor="from_name">{currentContent.nameLabel}</label>
+                <input
+                  type="text"
+                  id="from_name"
+                  name="from_name"
+                  required
+                  placeholder="Add your name here ..."
+                />
               </div>
               <div>
-                <label htmlFor="email">{currentContent.emailLabel}</label>
-                <input type="email" id="email" name="email" required />
+                <label htmlFor="from_email">{currentContent.emailLabel}</label>
+                <input
+                  type="email"
+                  id="from_email"
+                  name="from_email"
+                  placeholder="Add your email here..."
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="from_contact">
+                  {currentContent.contactLabel}
+                </label>
+                <input
+                  type="text"
+                  id="from_contact"
+                  name="from_contact"
+                  placeholder="Add your contact number here..."
+                  required
+                />
               </div>
               <div>
                 <label htmlFor="message">{currentContent.messageLabel}</label>
@@ -128,6 +223,7 @@ function ContactUs() {
                   id="message"
                   name="message"
                   rows="4"
+                  placeholder="Type your message here..."
                   required
                 ></textarea>
               </div>

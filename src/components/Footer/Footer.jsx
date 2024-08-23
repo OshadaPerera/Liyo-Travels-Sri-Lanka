@@ -5,11 +5,6 @@ import { NavLink } from "react-router-dom";
 import "./footerStyles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFacebook,
-  faInstagram,
-  faWhatsapp,
-} from "@fortawesome/free-brands-svg-icons";
-import {
   faLocationDot,
   faEnvelope,
   faPhone,
@@ -56,9 +51,9 @@ function Footer() {
             </span>
           </p>
           {/* This is the phone number */}
-          {/* <p>
+          <p>
             <FontAwesomeIcon icon={faPhone} /> {currentContent.office.phone}
-          </p> */}
+          </p>
         </div>
         <div className="col footerlinks">
           <h3>
@@ -86,7 +81,7 @@ function Footer() {
             <ul>
               {currentContent.socialLinks.links.map((link, index) => (
                 <li key={index}>
-                  <a href={link.url}>
+                  <a href={link.url} target="new">
                     <FontAwesomeIcon icon={link.icon} />
                   </a>
                 </li>
