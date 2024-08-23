@@ -44,13 +44,13 @@ function ContactUs() {
           <p>{currentContent.description}</p>
           <div className="contact-methods">
             <a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/message/VICGCNPT3UEWK1"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={faWhatsapp} /> {currentContent.whatsapp}
             </a>
-            <a href="mailto:info@liyotravels.com">
+            <a href="mailto:liyotravelssrilanka@gmail.com">
               <FontAwesomeIcon icon={faEnvelope} />
               {currentContent.email}
             </a>
@@ -79,14 +79,14 @@ function ContactUs() {
               <h3>{currentContent.followUs}</h3>
               <div className="followLinks">
                 <a
-                  href="https://www.facebook.com/yourpage"
+                  href="https://www.facebook.com/people/Liyo-Travels-Sri-Lanka/61564623182427/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FontAwesomeIcon icon={faFacebook} className="fbIcon" />
                 </a>
                 <a
-                  href="https://www.instagram.com/yourpage"
+                  href="https://www.instagram.com/liyo_travels_sl/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -102,7 +102,7 @@ function ContactUs() {
             </p>
           </div> */}
           </div>
-          <div className="map" ref={contactMapRef}>
+          {/* <div className="map" ref={contactMapRef}>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.073292073073!2d79.8613663147725!3d6.9274229950000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25a0b4d4b4b3d%3A0x1b3b3b3b3b3b3b3b!2sLiyo%20Travels!5e0!3m2!1sen!2slk!4v1629783660004!5m2!1sen!2slk"
               style={{ border: 0 }}
@@ -110,10 +110,10 @@ function ContactUs() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
-          </div>
+          </div> */}
           <div className="contact-form" ref={contactFormRef}>
             <h3>{currentContent.formTitle}</h3>
-            <form action="https://example.com/contact" method="post">
+            <form action="liyotravelssrilanka@gmail.com" method="post">
               <div>
                 <label htmlFor="name">{currentContent.nameLabel}</label>
                 <input type="text" id="name" name="name" required />

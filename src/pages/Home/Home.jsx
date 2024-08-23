@@ -91,6 +91,8 @@ const Home = () => {
           </div>
         </div>
 
+        
+
         {/* Home Book section with animation */}
         <div className="homeBook" ref={homeBookRef}>
           <div className="bookNow">
