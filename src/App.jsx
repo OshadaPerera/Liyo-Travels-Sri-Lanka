@@ -11,7 +11,7 @@ import AboutUs from "./pages/AboutUs/AboutUs"; // About Us page component
 import ContactUs from "./pages/ContactUs/ContactUs"; // Contact Us page component
 import NoPage from "./pages/NoPage/NoPage"; // NoPage component for handling undefined routes
 
-import { LanguageProvider } from "./components/languageContext"; // Importing the LanguageProvider from languageContext
+import { LanguageProvider } from "./components/LanguageContext"; // Importing the LanguageProvider from languageContext
 
 //Import the loader component
 import Loader from "./components/Loader"; // Loader component

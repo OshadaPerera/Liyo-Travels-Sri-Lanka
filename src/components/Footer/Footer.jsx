@@ -9,7 +9,7 @@ import {
   faEnvelope,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
-import { LanguageContext } from "../languageContext";
+import { LanguageContext } from "../LanguageContext";
 import { footerContent } from "./FooterContent";
 import Logo from "../../assets/images/logo.png";
 

@@ -2,9 +2,9 @@ import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { Navbar, Nav } from "react-bootstrap";
 import "./navBarStyles.css"; // Importing the CSS file
-import CustomDropdown from "../navDropDown"; // Importing the CustomDropdown component
+import CustomDropdown from "../NavDropDown"; // Importing the CustomDropdown component
 import { navbarContent } from "./NavbarContent";
-import { LanguageContext } from "../languageContext"; // Importing the LanguageContext
+import { LanguageContext } from "../LanguageContext"; // Importing the LanguageContext
 import Logo from "../../assets/images/logo.png"; // Importing the logo image
 
 function NavBar({ theme }) {
@@ -22,11 +22,7 @@ function NavBar({ theme }) {
       className={`bg-transparent navigation ${navbarColorClass}`}
     >
       <div className="container-fluid navBar">
-        <Navbar.Brand
-          as={NavLink}
-          to="/"
-          className={`navLogo`}
-        >
+        <Navbar.Brand as={NavLink} to="/" className={`navLogo`}>
           <img src={Logo} alt="Liyo Travels Logo" />
         </Navbar.Brand>
         <Navbar.Toggle

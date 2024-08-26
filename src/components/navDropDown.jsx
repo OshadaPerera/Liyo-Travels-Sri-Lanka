@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useContext } from "react";
-import { LanguageContext } from "./languageContext"; // Importing the LanguageContext to manage language state globally
+import { LanguageContext } from "./LanguageContext"; // Importing the LanguageContext to manage language state globally
 import UKflag from "../assets/images/ukflag.png"; // Importing the UK flag image
 import Israel from "../assets/images/israel.png"; // Importing the Israel flag image
 import "./styles/navDropDownStyles.css"; // Importing custom styles for the dropdown component

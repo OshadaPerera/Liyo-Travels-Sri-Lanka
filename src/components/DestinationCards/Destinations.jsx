@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { LanguageContext } from "../languageContext";
+import { LanguageContext } from "../LanguageContext";
 import { DestinationContent } from "./DestinationContent";
 import "./destinationStyles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -21,7 +21,6 @@ function Destinations() {
   const currentContent = DestinationContent[language];
 
   const destinationRef = useIntersectionObserver({ threshold: 0.1 });
-
 
   return (
     <div className="homeDestinations" ref={destinationRef}>

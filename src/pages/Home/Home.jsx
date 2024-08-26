@@ -1,6 +1,6 @@
 // Import necessary modules and components from React and other files
 import React, { useContext, useEffect } from "react";
-import { LanguageContext } from "../../components/languageContext";
+import { LanguageContext } from "../../components/LanguageContext";
 import { content } from "./HomeContent";
 import NavBar from "../../components/Navbar/NavBar";
 import Footer from "../../components/Footer/Footer";
@@ -24,9 +24,15 @@ const Home = () => {
   const homeWelcomeRef = useIntersectionObserver({ threshold: 0.1 });
   const homeChooseRef = useIntersectionObserver({ threshold: 0.1 });
   const homeBookRef = useIntersectionObserver({ threshold: 0.1 });
+  const homeVehicleRef = useIntersectionObserver({ threshold: 0.1 });
 
   // Refs for each card in the chooseCards section
   const chooseCardRefs = currentContent.homeChoose.chooseCards.map(() =>
+    useIntersectionObserver({ threshold: 0.1 })
+  );
+
+  //Refs for each card in the vehicleCards section
+  const vehicleCardRefs = currentContent.homeVehicle.vehicleCards.map(() =>
     useIntersectionObserver({ threshold: 0.1 })
   );
 
@@ -90,9 +96,26 @@ const Home = () => {
             ))}
           </div>
         </div>
-
-        
-
+        {/* Home vehicle section */}
+        <div className="homeVehicle" ref={homeVehicleRef}>
+          <h2>{currentContent.homeVehicle.title}</h2>
+          <div className="vehicleCards">
+            {currentContent.homeVehicle.vehicleCards.map((card, index) => (
+              <div
+                className={`vehicleCard animation${index} ${
+                  vehicleCardRefs[index].isIntersecting ? "visible" : ""
+                }`}
+                ref={vehicleCardRefs[index]}
+                key={index}
+              >
+                <h3>{card.subtitle}</h3>
+                <div className="vehicleImgs">{card.imgSrc}</div>
+                <h4>{card.title}</h4>
+                <p>{card.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
         {/* Home Book section with animation */}
         <div className="homeBook" ref={homeBookRef}>
           <div className="bookNow">

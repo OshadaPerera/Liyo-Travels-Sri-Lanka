@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { LanguageContext } from "../../components/languageContext";
+import { LanguageContext } from "../../components/LanguageContext";
 import { GalleryContent, GalleryImages } from "./GalleryContent";
 import NavBar from "../../components/Navbar/NavBar";
 import Footer from "../../components/Footer/Footer";
