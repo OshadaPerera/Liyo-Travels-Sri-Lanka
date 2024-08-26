@@ -1,3 +1,6 @@
+import sedan from "../../assets/images/vehicles/car.png";
+import van from "../../assets/images/vehicles/van.png";
+import bus from "../../assets/images/vehicles/bus.png";
 // Animation configurations
 const animations = {
   customizedTours: {
@@ -34,6 +37,18 @@ const animations = {
         autoplay
       ></dotlottie-player>
     ),
+  },
+};
+
+export const vehicleImages = {
+  sedan: {
+    imgSrc: <img src={sedan} alt="Sedan Car" />,
+  },
+  van: {
+    imgSrc: <img src={van} alt="Van" />,
+  },
+  bus: {
+    imgSrc: <img src={bus} alt="Bus" />,
   },
 };
 
@@ -77,6 +92,33 @@ export const content = {
         },
       ],
     },
+    homeVehicle: {
+      title: "Our Vehicle Packages",
+      vehicleCards: [
+        {
+          title: "1-3 Persons",
+          subtitle: "Sedan Cars",
+          description:
+            "Ideal for solo travelers, couples, or small groups. Enjoy comfort and convenience in our well-maintained sedans.",
+          imgSrc: vehicleImages.sedan.imgSrc,
+        },
+        {
+          title: "4-9 Persons",
+          subtitle: "Vans (High Roof/Flat Roof)",
+          description:
+            "Perfect for medium-sized groups. Spacious and comfortable, our vans are great for family trips or group tours.",
+          imgSrc: vehicleImages.van.imgSrc,
+        },
+        {
+          title: "10-17 Persons",
+          subtitle: "Buses",
+          description:
+            "For larger groups, our buses offer ample space and all the amenities needed for a smooth journey.",
+          imgSrc: vehicleImages.bus.imgSrc,
+        },
+      ],
+    },
+
     homeBook: {
       title: "Book Your Sri Lankan Adventure Today",
       content:
@@ -111,6 +153,32 @@ export const content = {
           ...animations.qualityAccommodation,
           title: "אירוח איכותי",
           description: `אנו משתפים פעולה עם מלונות, אתרי נופש ובתי הארחה בדירוג גבוה כדי לספק לכם אפשרויות אירוח נוחות ומפנקות. היו בטוחים, תיהנו משהייה מרגיעה לאחר יום של חקר.`,
+        },
+      ],
+    },
+    homeVehicle: {
+      title: "חבילות הרכב שלנו",
+      vehicleCards: [
+        {
+          title: "1-3 אנשים",
+          subtitle: "מכוניות סדאן",
+          description:
+            "מתאים ליחידים, זוגות או קבוצות קטנות. תהנו מנוחות ונוחות במכוניות הסדאן שלנו.",
+          imgSrc: vehicleImages.sedan.imgSrc,
+        },
+        {
+          title: "4-9 אנשים",
+          subtitle: "ואנים (גג גבוה/גג שטוח)",
+          description:
+            "מושלם לקבוצות בגודל בינוני. מרווח ונוח, הוואנים שלנו נהדרים לטיולים משפחתיים או סיורים קבוצתיים.",
+          imgSrc: vehicleImages.van.imgSrc,
+        },
+        {
+          title: "10-17 אנשים",
+          subtitle: "אוטובוסים",
+          description:
+            "לקבוצות גדולות יותר, האוטובוסים שלנו מציעים מרחב רב וכל המתקנים הדרושים לנסיעה חלקה.",
+          imgSrc: vehicleImages.bus.imgSrc,
         },
       ],
     },

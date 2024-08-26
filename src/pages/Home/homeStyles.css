@@ -225,6 +225,74 @@
   margin-top: 1rem;
 }
 
+.homeVehicle {
+  margin-top: 3rem;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Container for vehicle cards with responsive grid */
+.vehicleCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Vehicle card styling */
+.vehicleCard {
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+  height: 30rem;
+}
+
+.vehicleCard h4 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.vehicleCard img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Different animations for each card */
+.vehicleCard .animation0 {
+  opacity: 0;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.vehicleCard .animation0.visible {
+  animation: fadeUpAnimation 1s ease forwards;
+}
+
+.vehicleCard .animation1 {
+  opacity: 0;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.vehicleCard .animation1.visible {
+  animation: fadeRightAnimation 1s ease 1s forwards; /* Delay the animation */
+}
+
+.vehicleCard .animation2 {
+  opacity: 0;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.vehicleCard .animation2.visible {
+  animation: fadeLeftAnimation 1s ease 1s forwards; /* Delay the animation */
+}
+
 /* Styles for the home book now section */
 .homeBook {
   margin-top: 3rem;
@@ -378,9 +446,11 @@
 
   .homeWelcome {
     width: 98%;
+    margin-top: 1rem;
   }
 
-  .chooseCard {
+  .chooseCard, 
+  .vehicleCard {
     width: 100%;
   }
 
@@ -388,9 +458,16 @@
     width: 100%;
   }
 
-  .chooseCards {
+  .chooseCards,
+   .vehicleCards{
     grid-template-columns: 1fr; /* Display only one card per row */
     padding: 1rem; /* Adjust padding for smaller screens */
+  }
+  .vehicleCard {
+    height: auto;
+  }
+  .vehucleCard img {
+    max-height: 250px;
   }
 }
 
@@ -436,5 +513,8 @@
 
   .homeWelcome p {
     font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+  .vehicleCard img {
+    max-height: 200px;
   }
 }

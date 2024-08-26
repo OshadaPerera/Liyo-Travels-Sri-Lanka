@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { LanguageContext } from "../../components/languageContext";
+import { LanguageContext } from "../../components/LanguageContext";
 import { contactContent } from "./contactContent";
 import NavBar from "../../components/Navbar/NavBar";
 import Footer from "../../components/Footer/Footer";
@@ -20,7 +20,7 @@ import "./contactUsStyles.css";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import fbQR from "../../assets/images/qr_codes/fb 1.png";
 import instaQR from "../../assets/images/qr_codes/insta 1.png";
-import Notification from "../../components/notification";
+import Notification from "../../components/Notification";
 
 function ContactUs() {
   const { language } = useContext(LanguageContext);
