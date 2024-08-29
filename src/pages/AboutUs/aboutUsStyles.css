@@ -40,8 +40,11 @@
 }
 
 .aboutHeadingSection p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.6;
+  text-align: justify;
+  padding: 1rem;
+  color: #333;
 }
 
 .aboutSection {
@@ -54,6 +57,144 @@
 }
 
 .aboutSection p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.6;
+  padding: 1rem;
+
+}
+
+.aboutContent{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.missionAnimation {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+  width: 50vw;
+  pointer-events: none; /* Make sure the animation doesn't interfere with user interactions */
+}
+
+.visionAnimation{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+  width: 40vw;
+  pointer-events: none; /* Make sure the animation doesn't interfere with user interactions */
+
+}
+
+.aboutHeadingSection h2 {
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.aboutHeadingSection.visible h2 {
+  animation: fadeUpAnimation 2s ease forwards;
+}
+
+.aboutHeadingSection p {
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.aboutHeadingSection.visible p {
+  animation: fadeLeftAnimation 2s ease forwards;
+}
+
+.missionSection h3 {
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.missionSection.visible h3 {
+  animation: fadeUpAnimation 2s ease forwards;
+}
+
+.missionSection p {
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.missionSection.visible p {
+  animation: fadeLeftAnimation 2s ease forwards;
+}
+
+.visionSection h3 {
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.visionSection.visible h3 {
+  animation: fadeDownAnimation 2s ease forwards;
+}
+
+.visionSection p {
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.visionSection.visible p {
+  animation: fadeRightAnimation 2s ease forwards;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+  .aboutBody {
+    padding: 0 1rem;
+  }
+
+  .aboutHeadingSection h2 {
+    font-size: 2rem;
+  }
+
+  .aboutHeadingSection p {
+    font-size: 1rem;
+    padding: 0.4rem;
+  }
+
+  .aboutSection h3 {
+    font-size: 1.5rem;
+  }
+
+  .aboutSection p {
+    font-size: 1rem;
+  }
+
+  .aboutContent {
+    flex-direction: column;
+  }
+
+  .missionAnimation {
+    width: 100%;
+  }
+
+  .visionAnimation {
+    width: 100%;
+  }
+}
+
+/* Media queries */
+@media screen and (max-width: 480px) {
+  .aboutHeadingSection h2 {
+    font-size: 1.5rem;
+  }
+
+  .aboutHeadingSection p {
+    font-size: 0.9rem;
+  }
+
+  .aboutSection h3 {
+    font-size: 1.2rem;
+  }
+
+  .aboutSection p {
+    font-size: 0.9rem;
+  }
 }
